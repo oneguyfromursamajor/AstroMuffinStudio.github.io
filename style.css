@@ -1,45 +1,49 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Courier New', Courier, monospace;
   background-color: black;
-  font-family: 'Orbitron', sans-serif;
+  color: white;
 }
 
-.banner {
-  background-image: url('https://astromuffinstudio.com/bannerstars.png');
+/* Hero Section */
+.hero {
+  background-image: url('header_banner.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 20px;
   text-align: center;
-  padding: 100px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 64px;
   color: lime;
+  font-weight: 900;
+  margin: 0;
 }
 
-.banner h1 {
-  font-size: 80px;
-  margin: 0 0 40px;
-  font-weight: 800;
-}
-
+/* Navbar */
 .navbar {
-  background-color: deepskyblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
+  background-color: #00ccff;
+  padding: 15px 0;
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
-  gap: 60px;
+  justify-content: center;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.navbar li a {
-  color: gold;
+.navbar li {
+  margin: 0 25px;
+}
+
+.navbar a {
   text-decoration: none;
+  color: orange;
   font-weight: 900;
   font-size: 16px;
-  letter-spacing: 1px;
 }
