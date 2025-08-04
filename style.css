@@ -1,45 +1,54 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+    color: #00ff00;
 }
 
-/* Galaxy banner image (with baked-in logo) */
-.banner {
-  background-image: url('header_banner.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 180px;
-  width: 100%;
+.header {
+    background-image: url('header_banner.png');
+    background-size: cover;
+    background-position: center;
+    padding-top: 120px; /* Moves everything down to show galaxy */
+    padding-bottom: 40px;
+    text-align: center;
+    color: #00ff00;
 }
 
-/* Blue nav bar with centered yellow tabs */
 .navbar {
-  background-color: #00dbff;
-  padding: 20px 0;
+    background-color: #00d9ff;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.navbar ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.navbar a {
+    color: gold;
+    text-decoration: none;
+    margin: 0 20px;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
 }
 
-.navbar li a {
-  text-decoration: none;
-  color: gold;
-  font-weight: 900;
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.navbar a:hover {
+    text-shadow: 0 0 5px yellow, 0 0 10px yellow;
 }
 
-.navbar li a:hover {
-  color: white;
+.main {
+    padding: 40px;
+    text-align: center;
+    color: white;
+    background-color: #000;
+}
+
+.footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
 }
