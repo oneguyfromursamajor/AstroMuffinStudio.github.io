@@ -42,3 +42,16 @@ footer {
   bottom: 0;
   border-top: 1px solid #444;
 }
+.main-poster {
+  display: block;
+  margin: 40px auto;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+main {
+  text-align: center;
+  padding: 40px 20px;
+}
