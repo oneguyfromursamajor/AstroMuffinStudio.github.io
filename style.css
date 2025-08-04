@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* Increased spacing between tabs */
+  gap: 40px; /* Spacing between tabs */
   padding: 0;
   margin: 0;
 }
@@ -25,8 +25,10 @@ body {
 .navbar li a {
   text-decoration: none;
   color: #ffc600; /* Bright gold color */
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 900; /* Boldest */
+  font-size: 18px; /* Slightly larger */
+  letter-spacing: 1px; /* Touch of spacing between letters */
+  text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
