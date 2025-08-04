@@ -1,46 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
 body {
   margin: 0;
-  padding: 0;
-  background-color: #000;
-  font-family: 'Orbitron', sans-serif;
-  color: #fff;
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .banner {
-  background-image: url('images/galaxyheader.png');
-  background-size: cover;
-  background-position: center;
-  height: 250px;
-  width: 100%;
-}
-
-/* NAVIGATION BAR */
-.navbar {
-  background-color: #00dbff;
-  height: 60px;
+  background-color: #00dfff; /* Bright cyan banner */
+  padding: 20px 0;
   display: flex;
-  align-items: center; /* centers vertically */
   justify-content: center;
+  align-items: center;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 40px; /* increases space between tabs */
-  margin: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Increased spacing between tabs */
   padding: 0;
+  margin: 0;
 }
 
 .navbar li a {
   text-decoration: none;
-  color: #ffcc00;
+  color: #ffc600; /* Bright gold color */
   font-weight: bold;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
 .navbar li a:hover {
-  color: #fff;
+  color: white;
 }
