@@ -16,7 +16,7 @@ body {
 
 /* TOP BANNER */
 .banner {
-  background-image: url('banner-bg.jpg'); /* <- replace with your image name */
+  background-image: url('header_banner.png');
   background-size: cover;
   background-position: center;
   padding: 60px 0;
