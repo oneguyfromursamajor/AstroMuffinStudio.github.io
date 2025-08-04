@@ -1,112 +1,97 @@
+/* FONT SETUP */
+:root {
+  --font-banner: 'Noto Serif Hebrew', serif;
+  --font-tagline: 'Noto Serif Lao', serif;
+  --font-tabs: 'Orbitron', sans-serif;
+}
+
+/* GLOBAL RESET */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-tagline);
   background-color: #0a0a0a;
   color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
 
-.header-banner {
-  width: 100%;
-  height: auto;
-  display: block;
+/* TOP BANNER */
+.banner {
+  background-image: url('banner-bg.jpg'); /* <- replace with your image name */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  text-align: center;
 }
 
-nav .nav-tabs {
+.banner h1 {
+  font-family: var(--font-banner);
+  color: limegreen;
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* NAV BARS */
+nav ul {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
   display: flex;
   justify-content: center;
-  background-color: #00d8ff;
-  list-style: none;
-  margin: 0;
-  padding: 10px 0;
   flex-wrap: wrap;
+  font-family: var(--font-tabs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-nav .nav-tabs li {
+.top-nav {
+  background-color: #00d8ff;
+}
+
+.bottom-nav {
+  background-color: #ffcc00;
+}
+
+nav ul li {
   margin: 0 15px;
 }
 
-nav .nav-tabs a {
-  color: #ffffff;
+nav ul li a {
   text-decoration: none;
+  color: #000;
   font-weight: bold;
-  font-size: 1rem;
 }
 
-nav .nav-tabs a:hover {
+nav ul li a:hover {
   text-decoration: underline;
-  color: #ffcc66;
+  color: #333;
 }
 
-
-header {
-  background-color: #121212;
-  padding: 20px;
+/* MAIN LOGO */
+.main-logo {
   text-align: center;
-  border-bottom: 2px solid #444;
+  margin: 40px 0 20px;
 }
 
-nav {
-  margin-top: 10px;
+.main-logo img {
+  max-width: 300px;
+  height: auto;
 }
 
-nav a {
-  color: #66ccff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #ffcc66;
-}
-
-main {
+/* TAGLINE */
+.center-title {
+  text-align: center;
+  font-family: var(--font-tagline);
+  color: limegreen;
+  font-size: 1.3rem;
   padding: 20px;
 }
 
+/* FOOTER */
 footer {
   background-color: #121212;
   color: #888;
   text-align: center;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  border-top: 1px solid #444;
-}
-.main-poster {
-  display: block;
-  margin: 40px auto;
-  max-width: 90%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-}
-
-main {
-  text-align: center;
-  padding: 40px 20px;
-}
-.poster-full {
-  background-image: url('AstroMuffin_MainLogo.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px 60px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.logo-overlay h1 {
-  color: #fdd835;
-  font-size: 3rem;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
 }
