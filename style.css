@@ -1,49 +1,55 @@
 :root {
-  --font-banner: 'Noto Serif Hebrew', serif;
-  --font-tagline: 'Noto Serif Lao', serif;
-  --font-tabs: 'Orbitron', sans-serif;
+  /* Match this to the dark background in your poster */
+  --bg-color: #0b1d2c;
 
-  --color-black: #0a0a0a;
   --color-cyan: #00d8ff;
   --color-yellow: #ffcc00;
-  --color-lime: limegreen;
-  --color-footer-bg: #121212;
-  --color-footer-fg: #888;
+
+  --font-tabs: 'Orbitron', sans-serif;
+  --font-body: 'Noto Serif Lao', serif;
 }
 
-/* RESET + BASE */
-* { margin:0; padding:0; box-sizing:border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: var(--font-tagline);
-  background: var(--color-black);
-  color: var(--color-lime);
+  background: var(--bg-color);
+  font-family: var(--font-body);
+  color: white;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   align-items: center;
 }
 
-/* BANNER */
+/* ======= Banner ======= */
 .banner {
   width: 100%;
-  height: 350px;              /* a bit taller so we can drop the text lower */
+  height: 220px; /* Thinner than before */
   background: url('header_banner.png') center/cover no-repeat;
   display: flex;
   justify-content: center;
-  align-items: flex-end;      /* push H1 down toward the bottom */
-  padding-bottom: 30px;       /* more breathing room above the cyan bar */
+  align-items: center;
 }
 
-.banner h1 {
-  font-family: var(--font-banner);
-  color: var(--color-lime);
-  font-size: 3.5rem;
-  text-shadow: 2px 2px 4px #000;
+.banner .header-logo {
+  width: 600px;      /* Big poster/logo */
+  max-width: 90%;
+  height: auto;
+  object-fit: contain;
 }
 
-/* NAV STYLES */
-nav ul {
+/* ======= Top Nav ======= */
+.top-nav {
+  width: 100%;
+  background: var(--color-cyan);
+  padding: 6px 0;    /* Very slim */
+}
+
+.top-nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -53,40 +59,18 @@ nav ul {
   letter-spacing: 1px;
 }
 
-nav ul li {
-  margin: 0 12px;             /* tighten up spacing a bit */
+.top-nav li {
+  margin: 0 12px;
 }
 
-nav ul li a {
+.top-nav a {
+  color: var(--color-yellow);
   text-decoration: none;
   font-weight: bold;
   font-size: 0.9rem;
 }
 
-/* TOP NAV (slim) */
-.top-nav {
-  width: 100%;
-  background: var(--color-cyan);
-  padding: 6px 0;             /* much thinner than before */
-}
-
-.top-nav a {
-  color: var(--color-yellow);
-}
-
-/* BOTTOM NAV */
-.bottom-nav {
-  width: 100%;
-  background: var(--color-cyan);
-  margin-top: 40px;
-  padding: 10px 0;
-}
-
-.bottom-nav a {
-  color: var(--color-yellow);
-}
-
-/* MAIN */
+/* ======= Main ======= */
 main {
   flex: 1;
   width: 100%;
@@ -95,25 +79,17 @@ main {
   padding: 40px 20px;
 }
 
-.main-logo img {
-  width: 600px;               /* big! */
-  max-width: 90%;
-  height: auto;
-  margin: 0 auto;
-}
-
 .center-title h2 {
   font-size: 1.7rem;
+  color: white;
   line-height: 1.4;
-  margin-top: 40px;
-  color: var(--color-lime);
 }
 
-/* FOOTER */
+/* ======= Footer ======= */
 footer {
   width: 100%;
-  background: var(--color-footer-bg);
-  color: var(--color-footer-fg);
+  background: #111;
+  color: #888;
   text-align: center;
   padding: 20px 0;
   font-size: 0.9rem;
