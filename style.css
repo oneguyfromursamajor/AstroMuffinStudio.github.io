@@ -1,37 +1,45 @@
 body {
   margin: 0;
+  padding: 0;
   background-color: black;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .banner {
-  background-color: #00dfff; /* Bright cyan banner */
-  padding: 20px 0;
+  background-image: url('https://astromuffinstudio.com/bannerstars.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 20px 40px;
+  color: lime;
+}
+
+.banner h1 {
+  font-size: 80px;
+  margin: 0 0 40px;
+  font-weight: 800;
+}
+
+.navbar {
+  background-color: deepskyblue;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px 0;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px; /* Spacing between tabs */
-  padding: 0;
+  gap: 60px;
   margin: 0;
+  padding: 0;
 }
 
 .navbar li a {
+  color: gold;
   text-decoration: none;
-  color: #ffc600; /* Bright gold color */
-  font-weight: 900; /* Boldest */
-  font-size: 18px; /* Slightly larger */
-  letter-spacing: 1px; /* Touch of spacing between letters */
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-.navbar li a:hover {
-  color: white;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
