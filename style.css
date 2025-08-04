@@ -1,7 +1,42 @@
+/* ========== Banner (Galaxy Image) ========== */
 .banner {
   width: 100%;
   height: auto;
   background: url('header_banner.png') no-repeat center center;
   background-size: cover;
-  aspect-ratio: 16 / 5; /* adjust this ratio to match your image's shape */
+  aspect-ratio: 16 / 5; /* Adjust if your image is taller/shorter */
+}
+
+/* ========== Navigation Bar ========== */
+.navbar {
+  width: 100%;
+  background-color: #00dfff; /* Bright cyan */
+  padding: 12px 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  color: #f4b942; /* Yellow-orange like in your concept */
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
 }
