@@ -1,42 +1,46 @@
-/* ========== Banner (Galaxy Image) ========== */
-.banner {
-  width: 100%;
-  height: auto;
-  background: url('header_banner.png') no-repeat center center;
-  background-size: cover;
-  aspect-ratio: 16 / 5; /* Adjust if your image is taller/shorter */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
 }
 
-/* ========== Navigation Bar ========== */
-.navbar {
+.banner {
+  background-image: url('images/galaxyheader.png');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
   width: 100%;
-  background-color: #00dfff; /* Bright cyan */
-  padding: 12px 0;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  background-color: #00dbff;
+  height: 60px;
+  display: flex;
+  align-items: center; /* centers vertically */
+  justify-content: center;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: 40px; /* increases space between tabs */
   margin: 0;
   padding: 0;
 }
 
-.navbar li {
-  margin: 0 15px;
-}
-
-.navbar a {
+.navbar li a {
   text-decoration: none;
+  color: #ffcc00;
   font-weight: bold;
-  font-family: 'Orbitron', sans-serif;
-  color: #f4b942; /* Yellow-orange like in your concept */
-  font-size: 1rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
+.navbar li a:hover {
+  color: #fff;
 }
