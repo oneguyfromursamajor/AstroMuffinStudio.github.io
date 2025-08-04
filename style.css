@@ -55,3 +55,25 @@ main {
   text-align: center;
   padding: 40px 20px;
 }
+.poster-full {
+  background-image: url('AstroMuffin_MainLogo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px 60px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.logo-overlay h1 {
+  color: #fdd835;
+  font-size: 3rem;
+}
