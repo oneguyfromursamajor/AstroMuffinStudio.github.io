@@ -5,61 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Astro Muffin Studio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: limegreen;
+      font-family: 'Verdana', sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    header {
+      background: url('your-background-image.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 4em;
+      color: limegreen;
+    }
+
+    nav {
+      background-color: #00dfff;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    .main-logo {
+      display: block;
+      margin: 40px auto 20px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .tagline {
+      text-align: center;
+      font-size: 1.5em;
+      margin: 20px 0 60px;
+    }
+
+    footer {
+      background-color: #ffcc00;
+      text-align: center;
+      padding: 15px 0;
+      font-weight: bold;
+    }
+
+    .copyright {
+      background-color: #111;
+      color: gray;
+      text-align: center;
+      font-size: 0.9em;
+      padding: 20px 0;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
+    <header>
+      <h1>Astro Muffin Studio</h1>
+    </header>
 
-  <!-- Top Banner -->
-  <div class="banner">
-    <h1>Astro Muffin Studio</h1>
-  </div>
-
-  <!-- Cyan Nav Bar -->
-  <nav class="top-nav">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Games</a></li>
-      <li><a href="#">Pipeline</a></li>
-      <li><a href="#">Social Media</a></li>
-      <li><a href="#">Merchandise</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Start Main -->
-  <main>
-
-    <!-- Logo -->
-    <div class="main-logo">
-      <img src="AstroMuffin_MainLogo.png" alt="Astro Muffin Logo" />
-    </div>
-
-    <!-- Tagline -->
-    <div class="center-title">
-      <h2>Independent Games from the Edge of the Galaxy</h2>
-    </div>
-
-    <!-- Yellow Retro Nav -->
-    <nav class="bottom-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Games</a></li>
-        <li><a href="#">Pipeline</a></li>
-        <li><a href="#">Social Media</a></li>
-        <li><a href="#">Merchandise</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Copyright</a></li>
-      </ul>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">GAMES</a>
+      <a href="#">PIPELINE</a>
+      <a href="#">SOCIAL MEDIA</a>
+      <a href="#">MERCHANDISE</a>
+      <a href="#">CONTACT</a>
     </nav>
 
-  </main>
-  <!-- End Main -->
+    <img class="main-logo" src="cupcake-logo.png" alt="Astro Muffin Studios Logo">
 
-  <footer>
-    <p>© 2025 Astro Muffin Studio™. All rights reserved.</p>
-  </footer>
+    <div class="tagline">Independent Games From the Edge of the Galaxy</div>
 
+    <footer>
+      <a href="#">HOME</a> |
+      <a href="#">ABOUT</a> |
+      <a href="#">GAMES</a> |
+      <a href="#">PIPELINE</a> |
+      <a href="#">SOCIAL MEDIA</a> |
+      <a href="#">MERCHANDISE</a> |
+      <a href="#">CONTACT</a> |
+      <a href="#">COPYRIGHT</a>
+    </footer>
+
+    <div class="copyright">
+      © 2025 Astro Muffin Studio™. All rights reserved.
+    </div>
+  </div>
 </body>
 </html>
