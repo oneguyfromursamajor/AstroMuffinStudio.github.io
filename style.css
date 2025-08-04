@@ -96,9 +96,12 @@ nav ul li a:hover {
   text-align: center;
   font-family: var(--font-tagline);
   color: limegreen;
-  font-size: 1.3rem;
-  padding: 20px;
+  font-size: 1.7rem;
+  padding: 30px 20px;
+  max-width: 900px;
+  line-height: 1.6;
 }
+
 
 /* FOOTER */
 footer {
@@ -108,4 +111,16 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
   margin-top: 40px;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
