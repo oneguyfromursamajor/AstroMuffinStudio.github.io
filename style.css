@@ -1,49 +1,45 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Courier New', Courier, monospace;
   background-color: black;
-  color: white;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-/* Hero Section */
-.hero {
+/* Galaxy banner image (with baked-in logo) */
+.banner {
   background-image: url('header_banner.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 120px 20px;
-  text-align: center;
+  height: 180px;
+  width: 100%;
 }
 
-.hero h1 {
-  font-size: 64px;
-  color: lime;
-  font-weight: 900;
-  margin: 0;
-}
-
-/* Navbar */
+/* Blue nav bar with centered yellow tabs */
 .navbar {
-  background-color: #00ccff;
-  padding: 15px 0;
+  background-color: #00dbff;
+  padding: 20px 0;
 }
 
 .navbar ul {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 50px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.navbar li {
-  margin: 0 25px;
-}
-
-.navbar a {
+.navbar li a {
   text-decoration: none;
-  color: orange;
+  color: gold;
   font-weight: 900;
   font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar li a:hover {
+  color: white;
 }
