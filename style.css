@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #1a1a2e; /* Change this to whatever non-black color you prefer */
+    background-color: #1a1a2e; /* Clean deep background, not black */
     font-family: 'Orbitron', sans-serif;
     color: #00ff00;
 }
@@ -44,8 +44,9 @@ body {
 }
 
 .main-poster-container {
-    margin: 48px; /* Approx. 3 inches on most screens */
+    margin: 48px; /* Approx. 3 inches */
     text-align: center;
+    padding-bottom: 60px; /* Extra breathing room below */
 }
 
 .main-poster {
