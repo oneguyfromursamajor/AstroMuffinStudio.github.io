@@ -5,43 +5,88 @@
     <title>Astro Muffin Studio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script>
+        function switchLanguage(lang) {
+            const enElements = document.querySelectorAll('.lang-en');
+            const jpElements = document.querySelectorAll('.lang-jp');
+
+            enElements.forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
+            jpElements.forEach(el => el.style.display = lang === 'jp' ? 'inline' : 'none');
+        }
+    </script>
 </head>
-<body>
+<body onload="switchLanguage('en')">
     <div class="header">
-        <!-- No H1, just the banner with image as requested -->
+        <!-- Banner image can be placed here if needed -->
+    </div>
+
+    <div class="language-toggle">
+        <button onclick="switchLanguage('en')">EN</button>
+        <button onclick="switchLanguage('jp')">日本語</button>
     </div>
 
     <div class="navbar">
-        <a href="#">Home</a>
-        <a href="about.html">About</a>
-        <a href="#">Games</a>
-        <a href="#">Pipeline</a>
-        <a href="#">News</a>
-        <a href="#">Social</a>
-        <a href="#">Merchandise</a>
-        <a href="#">Contact</a>
-    </div>
-   
-<div class="main">
-  <div class="main-poster-container">
-    <img src="AstroMuffin_MainLogo.png" alt="Astro Muffin Studio Poster" class="main-poster">
-  </div>
-</div>
+        <a href="#" class="lang-en">Home</a>
+        <a href="#" class="lang-jp">ホーム</a>
 
- <div class="main">
-    <p>Independent Games From the Edge of the Galaxy</p>
+        <a href="about.html" class="lang-en">About</a>
+        <a href="about.html" class="lang-jp">私たちについて</a>
+
+        <a href="#" class="lang-en">Games</a>
+        <a href="#" class="lang-jp">ゲーム</a>
+
+        <a href="#" class="lang-en">Pipeline</a>
+        <a href="#" class="lang-jp">開発状況</a>
+
+        <a href="#" class="lang-en">News</a>
+        <a href="#" class="lang-jp">ニュース</a>
+
+        <a href="#" class="lang-en">Social</a>
+        <a href="#" class="lang-jp">ソーシャル</a>
+
+        <a href="#" class="lang-en">Merchandise</a>
+        <a href="#" class="lang-jp">グッズ</a>
+
+        <a href="#" class="lang-en">Contact</a>
+        <a href="#" class="lang-jp">連絡先</a>
+    </div>
+
+    <div class="main">
+        <div class="main-poster-container">
+            <img src="AstroMuffin_MainLogo.png" alt="Astro Muffin Studio Poster" class="main-poster">
+        </div>
+    </div>
+
+    <div class="main">
+        <p class="lang-en">Independent Games From the Edge of the Galaxy</p>
+        <p class="lang-jp">銀河の果てからお届けするインディーゲーム</p>
     </div>
 
     <div class="footer">
         <div class="navbar">
-            <a href="#">Home</a>
-            <a href="about.html">About</a>
-            <a href="#">Games</a>
-            <a href="#">Pipeline</a>
-            <a href="#">Social Media</a>
-            <a href="#">Merchandise</a>
-            <a href="#">Contact</a>
-            <a href="#">Copyright</a>
+            <a href="#" class="lang-en">Home</a>
+            <a href="#" class="lang-jp">ホーム</a>
+
+            <a href="about.html" class="lang-en">About</a>
+            <a href="about.html" class="lang-jp">私たちについて</a>
+
+            <a href="#" class="lang-en">Games</a>
+            <a href="#" class="lang-jp">ゲーム</a>
+
+            <a href="#" class="lang-en">Pipeline</a>
+            <a href="#" class="lang-jp">開発状況</a>
+
+            <a href="#" class="lang-en">Social Media</a>
+            <a href="#" class="lang-jp">ソーシャル</a>
+
+            <a href="#" class="lang-en">Merchandise</a>
+            <a href="#" class="lang-jp">グッズ</a>
+
+            <a href="#" class="lang-en">Contact</a>
+            <a href="#" class="lang-jp">連絡先</a>
+
+            <a href="#" class="lang-en">Copyright</a>
+            <a href="#" class="lang-jp">著作権</a>
         </div>
         <p>© 2025 Astro Muffin Studio™. All rights reserved.</p>
     </div>
