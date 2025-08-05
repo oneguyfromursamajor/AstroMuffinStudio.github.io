@@ -3,7 +3,7 @@ body {
     padding: 0;
     background-color: black;
     font-family: 'Orbitron', sans-serif;
-    color: #00ff00;
+    color: #C084FC;
 }
 
 .header {
@@ -16,7 +16,7 @@ body {
 }
 
 .navbar {
-    background-color: #C084FC;
+    background-color: #00d9ff;
     display: flex;
     justify-content: center;
     padding:10px 0;
