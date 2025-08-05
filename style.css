@@ -10,23 +10,15 @@ body {
     background-image: url('header_banner.png');
     background-size: cover;
     background-position: center;
-    padding-top: 120px; /* Shows the banner image */
+    padding-top: 120px; /* Moves everything down to show galaxy */
     padding-bottom: 40px;
     text-align: center;
-    color: #00ff00;
-}
-
-.header h1 {
-    font-size: 36px;
-    margin: 0;
-    color: #00ff00;
 }
 
 .navbar {
     background-color: #00d9ff;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     padding: 10px 0;
     font-weight: bold;
     font-size: 14px;
@@ -48,38 +40,7 @@ body {
     padding: 40px;
     text-align: center;
     color: white;
-    background-color: #00131a;
-}
-
-.main-logo {
-    max-width: 80%;
-    height: auto;
-}
-
-.tagline {
-    color: #00ff00;
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-.footer-nav {
-    background-color: black;
-    color: yellow;
-    text-align: center;
-    padding: 30px 0 10px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 14px;
-}
-
-.footer-nav a {
-    color: yellow;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.footer-nav .copyright {
-    margin-top: 10px;
-    font-size: 14px;
+    background-color: #000;
 }
 
 .footer {
