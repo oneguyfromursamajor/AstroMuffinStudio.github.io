@@ -42,7 +42,9 @@ body {
     color: white;
     background-color: #000;
 }
-
+<div class="main-poster-container">
+  <img src="AstroMuffin_MainLogo.png" alt="Astro Muffin Studio Poster" class="main-poster">
+</div>
 .footer {
     background-color: #111;
     color: #ccc;
