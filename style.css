@@ -11,7 +11,7 @@ body {
     background-size: cover;
     background-position: center;
     padding-top: 420px; /* Moves everything down to show galaxy */
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
@@ -21,7 +21,7 @@ body {
     justify-content: center;
     padding:50px 0;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .navbar a {
