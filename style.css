@@ -7,7 +7,7 @@ body {
 }
 
 .header {
-    background-image: url('header_banner.png');
+    background-image: url('AstroMuffin_MainBanner.png');
     background-size: cover;
     background-position: center;
     padding-top: 410px; /* Moves everything down to show galaxy */
