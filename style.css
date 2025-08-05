@@ -65,3 +65,19 @@ body {
     font-size: 12px;
     font-family: 'Courier New', monospace;
 }
+.lang-toggle {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.lang-toggle button {
+    background-color: transparent;
+    border: 1px solid #C084FC;
+    color: #C084FC;
+    font-family: 'Press Start 2P', cursive;
+    padding: 4px 6px;
+    margin-left: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
