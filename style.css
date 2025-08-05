@@ -1,7 +1,7 @@
 body {
-    margin: 1;
+    margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #1a1a2e; /* Change this to whatever non-black color you prefer */
     font-family: 'Orbitron', sans-serif;
     color: #00ff00;
 }
@@ -10,7 +10,7 @@ body {
     background-image: url('HomePage_Banner003.png');
     background-size: cover;
     background-position: center;
-    padding-top: 120px; /* Moves everything down to show galaxy */
+    padding-top: 120px;
     padding-bottom: 1px;
     text-align: center;
 }
@@ -19,7 +19,7 @@ body {
     background-color: #00d9ff;
     display: flex;
     justify-content: center;
-    padding:10px 0;
+    padding: 10px 0;
     font-weight: bold;
     font-size: 20px;
 }
@@ -40,11 +40,22 @@ body {
     padding: 40px;
     text-align: center;
     color: white;
-    background-color: #000;
+    background-color: transparent;
 }
-<div class="main-poster-container">
-  <img src="AstroMuffin_MainLogo.png" alt="Astro Muffin Studio Poster" class="main-poster">
-</div>
+
+.main-poster-container {
+    margin: 48px; /* Approx. 3 inches on most screens */
+    text-align: center;
+}
+
+.main-poster {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border: 3px solid #C084FC; /* Optional: poster frame */
+    box-shadow: 0 0 20px #C084FC;
+}
+
 .footer {
     background-color: #111;
     color: #ccc;
