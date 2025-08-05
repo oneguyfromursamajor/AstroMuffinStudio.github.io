@@ -4,91 +4,51 @@
     <meta charset="UTF-8">
     <title>Astro Muffin Studio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script>
-        function switchLanguage(lang) {
-            const enElements = document.querySelectorAll('.lang-en');
-            const jpElements = document.querySelectorAll('.lang-jp');
-
-            enElements.forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
-            jpElements.forEach(el => el.style.display = lang === 'jp' ? 'inline' : 'none');
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
-<body onload="switchLanguage('en')">
+<body>
     <div class="header">
-        <!-- Banner image can be placed here if needed -->
-    </div>
-
-    <div class="language-toggle">
-        <button onclick="switchLanguage('en')">EN</button>
-        <button onclick="switchLanguage('jp')">日本語</button>
-    </div>
-
-    <div class="navbar">
-        <a href="#" class="lang-en">Home</a>
-        <a href="#" class="lang-jp">ホーム</a>
-
-        <a href="about.html" class="lang-en">About</a>
-        <a href="about.html" class="lang-jp">私たちについて</a>
-
-        <a href="#" class="lang-en">Games</a>
-        <a href="#" class="lang-jp">ゲーム</a>
-
-        <a href="#" class="lang-en">Pipeline</a>
-        <a href="#" class="lang-jp">開発状況</a>
-
-        <a href="#" class="lang-en">News</a>
-        <a href="#" class="lang-jp">ニュース</a>
-
-        <a href="#" class="lang-en">Social</a>
-        <a href="#" class="lang-jp">ソーシャル</a>
-
-        <a href="#" class="lang-en">Merchandise</a>
-        <a href="#" class="lang-jp">グッズ</a>
-
-        <a href="#" class="lang-en">Contact</a>
-        <a href="#" class="lang-jp">連絡先</a>
-    </div>
-
-    <div class="main">
-        <div class="main-poster-container">
-            <img src="AstroMuffin_MainLogo.png" alt="Astro Muffin Studio Poster" class="main-poster">
+        <h1 data-en="Astro Muffin Studio" data-jp="アストロマフィンスタジオ"></h1>
+        
+        <div class="lang-toggle">
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('jp')">JP</button>
         </div>
+
+        <nav class="nav">
+            <a href="index.html" data-en="Home" data-jp="ホーム"></a>
+            <a href="about.html" data-en="About" data-jp="アバウト"></a>
+            <a href="social.html" data-en="Social" data-jp="ソーシャル"></a>
+            <a href="news.html" data-en="News" data-jp="ニュース"></a>
+        </nav>
     </div>
 
-    <div class="main">
-        <p class="lang-en">Independent Games From the Edge of the Galaxy</p>
-        <p class="lang-jp">銀河の果てからお届けするインディーゲーム</p>
-    </div>
+    <main>
+        <p data-en="Welcome to the galaxy’s brightest stop!" data-jp="銀河で最も輝く場所へようこそ！"></p>
+        <p data-en="Explore, build, and thrive in Bright Star Station." data-jp="ブライトスター・ステーションで探検し、築き、繁栄しよう。"></p>
+    </main>
 
-    <div class="footer">
-        <div class="navbar">
-            <a href="#" class="lang-en">Home</a>
-            <a href="#" class="lang-jp">ホーム</a>
+    <footer>
+        <p data-en="© 2025 Astro Muffin Studio" data-jp="© 2025 アストロマフィンスタジオ"></p>
+    </footer>
 
-            <a href="about.html" class="lang-en">About</a>
-            <a href="about.html" class="lang-jp">私たちについて</a>
+    <script>
+        function setLanguage(lang) {
+            localStorage.setItem('language', lang);
+            applyLanguage(lang);
+        }
 
-            <a href="#" class="lang-en">Games</a>
-            <a href="#" class="lang-jp">ゲーム</a>
+        function applyLanguage(lang) {
+            const elements = document.querySelectorAll('[data-en], [data-jp]');
+            elements.forEach(el => {
+                el.innerText = el.getAttribute(`data-${lang}`);
+            });
+        }
 
-            <a href="#" class="lang-en">Pipeline</a>
-            <a href="#" class="lang-jp">開発状況</a>
-
-            <a href="#" class="lang-en">Social Media</a>
-            <a href="#" class="lang-jp">ソーシャル</a>
-
-            <a href="#" class="lang-en">Merchandise</a>
-            <a href="#" class="lang-jp">グッズ</a>
-
-            <a href="#" class="lang-en">Contact</a>
-            <a href="#" class="lang-jp">連絡先</a>
-
-            <a href="#" class="lang-en">Copyright</a>
-            <a href="#" class="lang-jp">著作権</a>
-        </div>
-        <p>© 2025 Astro Muffin Studio™. All rights reserved.</p>
-    </div>
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('language') || 'en';
+            applyLanguage(savedLang);
+        });
+    </script>
 </body>
 </html>
