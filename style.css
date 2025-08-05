@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 1;
     padding: 0;
     background-color: black;
     font-family: 'Orbitron', sans-serif;
@@ -11,7 +11,7 @@ body {
     background-size: cover;
     background-position: center;
     padding-top: 420px; /* Moves everything down to show galaxy */
-    padding-bottom: px;
+    padding-bottom: 1px;
     text-align: center;
 }
 
