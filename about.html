@@ -4,133 +4,68 @@
     <meta charset="UTF-8">
     <title>About – Astro Muffin Studio</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .lang-toggle-container {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        #lang-toggle {
-            padding: 10px 20px;
-            font-size: 14px;
-            background-color: #00d9ff;
-            color: #1a1a2e;
-            border: none;
-            cursor: pointer;
-            font-family: 'Press Start 2P', cursive;
-        }
-
-        .lang {
-            display: none;
-        }
-
-        .lang.active {
-            display: block;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Language Toggle -->
-    <div class="lang-toggle-container">
-        <button id="lang-toggle" data-lang="en">🇺🇸 English</button>
+    <div class="header">
+        <div class="lang-toggle">
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('jp')">JP</button>
+        </div>
     </div>
 
-    <!-- Navbar EN -->
-    <div class="navbar lang en active">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="#">Games</a>
-        <a href="#">Pipeline</a>
-        <a href="#">News</a>
-        <a href="#">Social</a>
-        <a href="#">Merchandise</a>
-        <a href="#">Contact</a>
+    <div class="navbar">
+        <a href="index.html" data-en="Home" data-jp="ホーム"></a>
+        <a href="about.html" data-en="About" data-jp="アバウト"></a>
+        <a href="#" data-en="Games" data-jp="ゲーム"></a>
+        <a href="#" data-en="Pipeline" data-jp="計画"></a>
+        <a href="#" data-en="News" data-jp="ニュース"></a>
+        <a href="#" data-en="Social" data-jp="ソーシャル"></a>
+        <a href="#" data-en="Merchandise" data-jp="グッズ"></a>
+        <a href="#" data-en="Contact" data-jp="連絡先"></a>
     </div>
 
-    <!-- Navbar JP -->
-    <div class="navbar lang ja">
-        <a href="index.html">ホーム</a>
-        <a href="about.html">紹介</a>
-        <a href="#">ゲーム</a>
-        <a href="#">開発中</a>
-        <a href="#">ニュース</a>
-        <a href="#">SNS</a>
-        <a href="#">グッズ</a>
-        <a href="#">連絡先</a>
-    </div>
-
-    <!-- Main content -->
     <div class="main">
+        <h1 data-en="About Astro Muffin Studio" data-jp="アストロ・マフィン・スタジオについて"></h1>
 
-        <!-- English -->
-        <div class="lang en active">
-            <h1>About Astro Muffin Studio</h1>
-            <p>We are <strong>Astro Muffin Studio</strong>, an independent creative vessel...</p>
-            <!-- (Trim for brevity. Use your full About content here.) -->
-        </div>
+        <p data-en="We are Astro Muffin Studio, an independent creative vessel originally dispatched from the Ursa Major Constellation for observation, data collection, and snack retrieval." 
+           data-jp="私たちはアストロ・マフィン・スタジオです。元々は観察、データ収集、そしておやつの確保を目的に、おおぐま座から派遣された独立系クリエイティブ船です。"></p>
 
-        <!-- Japanese -->
-        <div class="lang ja">
-            <h1>アストロ・マフィン・スタジオについて</h1>
-            <p>私たちは <strong>Astro Muffin Studio</strong> です。独立したクリエイティブチームで…</p>
-            <!-- (Paste your translated content here.) -->
-        </div>
+        <p data-en="Somewhere between your deserts and your disc drives, the mission changed." 
+           data-jp="あなたの砂漠とディスクドライブの間で、ミッションは変わりました。"></p>
+
+        <p data-en="Founded by a displaced biological specialist, former Med Tech, and memory archivist, Astro Muffin is a solo operation powered by Kit-Kats, coffee, nostalgia, unresolved trauma, and cosmic radiation." 
+           data-jp="生物学者、元メドテック、記憶のアーキビストによって設立されたアストロ・マフィンは、キットカット、コーヒー、ノスタルジア、未解決のトラウマ、そして宇宙線で動いています。"></p>
+
+        <p data-en="This studio isn’t confined to one genre or form. We conjure horror, adventure, comedy, and everything in between." 
+           data-jp="このスタジオは、ジャンルや形式に縛られません。ホラー、アドベンチャー、コメディー、そしてその間にあるすべてを創造します。"></p>
+
+        <p data-en="We craft games, characters, clip art, and emotionally unstable pastries with questionable life choices." 
+           data-jp="私たちはゲーム、キャラクター、クリップアート、そして不安定な感情を持つ怪しい過去のペストリーを創造します。"></p>
+
+        <p data-en="All the creations under this banner channel something real: laughter on dying planets, love in forgotten corridors, grief embedded in code, and hope hidden in glitch." 
+           data-jp="このバナーの下にあるすべての創作物は、死にゆく惑星での笑い、忘れ去られた通路での愛、コードに埋め込まれた悲しみ、そしてグリッチに隠された希望を表しています。"></p>
+
+        <p data-en="Our mission is simple: To craft stories that feel like memories. To build worlds that whisper to the strange part of your soul. To leave you better than we found you." 
+           data-jp="私たちの使命はシンプルです：記憶のように感じる物語を創り、魂の奥に語りかける世界を築き、出会ったときよりもあなたを良い状態にすること。"></p>
     </div>
 
-    <!-- Footer EN -->
-    <div class="footer lang en active">
+    <div class="footer">
         <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="#">Games</a>
-            <a href="#">Pipeline</a>
-            <a href="#">Social</a>
-            <a href="#">Merchandise</a>
-            <a href="#">Contact</a>
-            <a href="#">Copyright</a>
+            <a href="index.html" data-en="Home" data-jp="ホーム"></a>
+            <a href="about.html" data-en="About" data-jp="アバウト"></a>
+            <a href="#" data-en="Games" data-jp="ゲーム"></a>
+            <a href="#" data-en="Pipeline" data-jp="計画"></a>
+            <a href="#" data-en="Social Media" data-jp="ソーシャルメディア"></a>
+            <a href="#" data-en="Merchandise" data-jp="グッズ"></a>
+            <a href="#" data-en="Contact" data-jp="連絡先"></a>
+            <a href="#" data-en="Copyright" data-jp="著作権"></a>
         </div>
-        <p>© 2025 Astro Muffin Studio™. All rights reserved.</p>
+        <p data-en="© 2025 Astro Muffin Studio™. All rights reserved." 
+           data-jp="© 2025 アストロマフィンスタジオ™。無断転載を禁じます。"></p>
     </div>
 
-    <!-- Footer JP -->
-    <div class="footer lang ja">
-        <div class="navbar">
-            <a href="index.html">ホーム</a>
-            <a href="about.html">紹介</a>
-            <a href="#">ゲーム</a>
-            <a href="#">開発中</a>
-            <a href="#">SNS</a>
-            <a href="#">グッズ</a>
-            <a href="#">連絡先</a>
-            <a href="#">著作権</a>
-        </div>
-        <p>© 2025 アストロ・マフィン・スタジオ™. 無断転載を禁じます。</p>
-    </div>
-
-    <!-- JS -->
-    <script>
-        const toggle = document.getElementById('lang-toggle');
-        const allLangElements = document.querySelectorAll('.lang');
-
-        toggle.addEventListener('click', () => {
-            const currentLang = toggle.dataset.lang;
-            const newLang = currentLang === 'en' ? 'ja' : 'en';
-
-            allLangElements.forEach(el => {
-                if (el.classList.contains(currentLang)) {
-                    el.classList.remove('active');
-                }
-                if (el.classList.contains(newLang)) {
-                    el.classList.add('active');
-                }
-            });
-
-            toggle.dataset.lang = newLang;
-            toggle.textContent = newLang === 'en' ? '🇺🇸 English' : '🇯🇵 日本語';
-        });
-    </script>
-
+    <script src="language.js"></script>
 </body>
 </html>
-<script src="language.js"></script>
