@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #1a1a2e;
+    background-color: #1a1a2e; /* Clean deep background, not black */
     font-family: 'Orbitron', sans-serif;
     color: #00ff00;
 }
@@ -10,70 +10,58 @@ body {
     background-image: url('HomePage_Banner003.png');
     background-size: cover;
     background-position: center;
-    padding: 120px 20px 20px 20px;
-    position: relative;
+    padding-top: 120px;
+    padding-bottom: 1px;
     text-align: center;
 }
 
-.lang-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.navbar {
+    background-color: #00d9ff;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.lang-toggle button {
-    background-color: #00ff00;
-    color: #1a1a2e;
-    border: none;
-    padding: 5px 10px;
-    margin-left: 5px;
-    font-family: 'Orbitron', sans-serif;
-    cursor: pointer;
-}
-
-.lang-toggle button:hover {
-    background-color: #00cc00;
-}
-
-.nav {
-    margin-top: 20px;
-}
-
-.nav a {
-    color: #00ff00;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-}
-
-main {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: #888;
-}
-.lang-toggle {
-    margin-left: 20px;
-}
-
-.lang-toggle button {
-    background-color: transparent;
-    border: 2px solid #C084FC;
+.navbar a {
     color: #C084FC;
+    text-decoration: none;
+    margin: 0 20px;
+    text-transform: uppercase;
     font-family: 'Press Start 2P', cursive;
-    padding: 4px 8px;
-    cursor: pointer;
-    font-size: 12px;
-    margin-left: 5px;
 }
 
-.lang-toggle button:hover {
-    background-color: #C084FC;
-    color: black;
+.navbar a:hover {
+    text-shadow: 0 0 5px yellow, 0 0 10px yellow;
+}
+
+.main {
+    padding: 40px;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+}
+
+.main-poster-container {
+    margin: 48px; /* Approx. 3 inches */
+    text-align: center;
+    padding-bottom: 60px; /* Extra breathing room below */
+}
+
+.main-poster {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border: 3px solid #C084FC; /* Optional: poster frame */
+    box-shadow: 0 0 20px #C084FC;
+}
+
+.footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
 }
