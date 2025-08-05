@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Games – Astro Muffin Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .tab-buttons button {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+            background-color: #00d9ff;
+            border: none;
+            padding: 10px 20px;
+            color: #1a1a2e;
+            cursor: pointer;
+        }
+
+        .tab-content {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .game-image {
+            max-width: 800px;
+            width: 100%;
+            margin: 20px auto;
+            display: block;
+            border: 2px solid #C084FC;
+            box-shadow: 0 0 20px #C084FC;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00ff00;
+        }
+
+        p {
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Language Toggle -->
+    <div class="header">
+        <div class="lang-toggle">
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('jp')">JP</button>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html" data-en="Home" data-jp="ホーム"></a>
+        <a href="about.html" data-en="About" data-jp="アバウト"></a>
+        <a href="game.html" data-en="Games" data-jp="ゲーム"></a>
+        <a href="#" data-en="Pipeline" data-jp="計画"></a>
+        <a href="#" data-en="News" data-jp="ニュース"></a>
+        <a href="#" data-en="Social" data-jp="ソーシャル"></a>
+        <a href="#" data-en="Merchandise" data-jp="グッズ"></a>
+        <a href="copyright.html" data-en="Copyright" data-jp="著作権"></a>
+    </div>
+
+    <!-- Tab Buttons -->
+    <div class="tab-buttons">
+        <button onclick="switchTab('current')"
+                data-en="Current Projects"
+                data-jp="現在のプロジェクト">Current Projects</button>
+        <button onclick="switchTab('future')"
+                data-en="Future Projects"
+                data-jp="将来のプロジェクト">Future Projects</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="main">
+
+        <!-- Current Projects -->
+        <div id="current" class="tab-content active">
+            <h2 data-en="Bright Star Station" data-jp="ブライトスター・ステーション"></h2>
+            <img src="BrightStarStationImage.png" alt="Bright Star Station" class="game-image">
+            <p data-en="Bright Star Station is your last stop before Andromeda—a cozy, quirky slice-of-life sim set on a floating station full of aliens, stories, and space ramen." 
+               data-jp="『ブライトスター・ステーション』はアンドロメダの手前、最後の寄港地。個性的なエイリアンや物語、美味しいスペースラーメンに満ちた、居心地の良いシミュレーションゲームです。"></p>
+        </div>
+
+        <!-- Future Projects -->
+        <div id="future" class="tab-content">
+            <h2 data-en="Coming Soon..." data-jp="近日公開..."></h2>
+            <p data-en="We’re cooking up more cosmic madness. Stay tuned." 
+               data-jp="さらに宇宙的なクレイジーを開発中。お楽しみに！"></p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="navbar">
+            <a href="index.html" data-en="Home" data-jp="ホーム"></a>
+            <a href="about.html" data-en="About" data-jp="アバウト"></a>
+            <a href="game.html" data-en="Games" data-jp="ゲーム"></a>
+            <a href="#" data-en="Pipeline" data-jp="計画"></a>
+            <a href="#" data-en="Social" data-jp="ソーシャル"></a>
+            <a href="#" data-en="Merchandise" data-jp="グッズ"></a>
+            <a href="copyright.html" data-en="Copyright" data-jp="著作権"></a>
+        </div>
+        <p data-en="© 2025 Astro Muffin Studio™. All rights reserved." 
+           data-jp="© 2025 アストロマフィンスタジオ™。無断転載を禁じます。"></p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="language.js"></script>
+    <script>
+        function switchTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
