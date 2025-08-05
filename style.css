@@ -11,7 +11,7 @@ body {
     background-size: cover;
     background-position: center;
     padding-top: 420px; /* Moves everything down to show galaxy */
-    padding-bottom: 5px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
