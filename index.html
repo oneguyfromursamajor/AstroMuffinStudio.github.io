@@ -8,42 +8,51 @@
 </head>
 <body>
     <div class="header">
-        <!-- No H1, just the banner with image -->
+        <!-- Banner image background only -->
     </div>
 
     <div class="navbar">
-        <a href="#">Home</a>
-        <a href="about.html">About</a>
-        <a href="#">Games</a>
-        <a href="#">Pipeline</a>
-        <a href="#">News</a>
-        <a href="#">Social</a>
-        <a href="#">Merchandise</a>
-        <a href="#">Contact</a>
-    </div>
-   
-<div class="main">
-  <div class="main-poster-container">
-    <img src="AstroMuffin_MainLogo.png" alt="Astro Muffin Studio Poster" class="main-poster">
-  </div>
-</div>
+        <a href="index.html" data-en="Home" data-jp="ホーム"></a>
+        <a href="about.html" data-en="About" data-jp="アバウト"></a>
+        <a href="#" data-en="Games" data-jp="ゲーム"></a>
+        <a href="#" data-en="Pipeline" data-jp="計画"></a>
+        <a href="#" data-en="News" data-jp="ニュース"></a>
+        <a href="#" data-en="Social" data-jp="ソーシャル"></a>
+        <a href="#" data-en="Merchandise" data-jp="グッズ"></a>
+        <a href="#" data-en="Contact" data-jp="連絡先"></a>
 
- <div class="main">
-    <p>Independent Games From the Edge of the Galaxy</p>
+        <!-- Language buttons -->
+        <span class="lang-toggle">
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('jp')">JP</button>
+        </span>
+    </div>
+
+    <div class="main">
+        <div class="main-poster-container">
+            <img src="AstroMuffin_MainLogo.png" alt="Astro Muffin Studio Poster" class="main-poster">
+        </div>
+    </div>
+
+    <div class="main">
+        <p data-en="Independent Games From the Edge of the Galaxy" data-jp="銀河の果てからのインディーゲーム"></p>
     </div>
 
     <div class="footer">
         <div class="navbar">
-            <a href="#">Home</a>
-            <a href="about.html">About</a>
-            <a href="#">Games</a>
-            <a href="#">Pipeline</a>
-            <a href="#">Social Media</a>
-            <a href="#">Merchandise</a>
-            <a href="#">Contact</a>
-            <a href="#">Copyright</a>
+            <a href="index.html" data-en="Home" data-jp="ホーム"></a>
+            <a href="about.html" data-en="About" data-jp="アバウト"></a>
+            <a href="#" data-en="Games" data-jp="ゲーム"></a>
+            <a href="#" data-en="Pipeline" data-jp="計画"></a>
+            <a href="#" data-en="Social Media" data-jp="ソーシャルメディア"></a>
+            <a href="#" data-en="Merchandise" data-jp="グッズ"></a>
+            <a href="#" data-en="Contact" data-jp="連絡先"></a>
+            <a href="#" data-en="Copyright" data-jp="著作権"></a>
         </div>
-        <p>© 2025 Astro Muffin Studio™. All rights reserved.</p>
+        <p data-en="© 2025 Astro Muffin Studio™. All rights reserved." data-jp="© 2025 アストロマフィンスタジオ™。無断転載を禁じます。"></p>
     </div>
+
+    <!-- Load the language switching script -->
+    <script src="language.js"></script>
 </body>
 </html>
