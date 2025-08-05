@@ -25,7 +25,7 @@ body {
 }
 
 .navbar a {
-    color: gold;
+    color: #C084FC;
     text-decoration: none;
     margin: 0 20px;
     text-transform: uppercase;
@@ -44,7 +44,7 @@ body {
 }
 
 .footer {
-    background-color: #C084FC;
+    background-color: #111;
     color: #ccc;
     text-align: center;
     padding: 20px;
