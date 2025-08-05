@@ -10,7 +10,7 @@ body {
     background-image: url('AstroMuffin_MainBanner.png');
     background-size: cover;
     background-position: center;
-    padding-top: 410px; /* Moves everything down to show galaxy */
+    padding-top: 420px; /* Moves everything down to show galaxy */
     padding-bottom: 40px;
     text-align: center;
 }
@@ -19,7 +19,7 @@ body {
     background-color: #00d9ff;
     display: flex;
     justify-content: center;
-    padding: 4px 0;
+    padding:30px 0;
     font-weight: bold;
     font-size: 12px;
 }
