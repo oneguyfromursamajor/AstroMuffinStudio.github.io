@@ -58,3 +58,22 @@ footer {
     font-size: 14px;
     color: #888;
 }
+.lang-toggle {
+    margin-left: 20px;
+}
+
+.lang-toggle button {
+    background-color: transparent;
+    border: 2px solid #C084FC;
+    color: #C084FC;
+    font-family: 'Press Start 2P', cursive;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.lang-toggle button:hover {
+    background-color: #C084FC;
+    color: black;
+}
