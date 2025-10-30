@@ -92,15 +92,18 @@ footer {
   }
 }
 
-/* ======= Top Banner (Hero) ======= */
-.hero {
+/* ======= HEADER BANNER ======= */
+.site-header {
   width: 100%;
   overflow: hidden;
-  background: #000;
+  background-color: #000;
 }
 
-.hero img {
+.header-banner {
   width: 100%;
   height: auto;
   display: block;
+  max-height: 250px;
+  object-fit: cover;
 }
+
