@@ -144,3 +144,33 @@ img {
   }
 }
 
+/* ---- Force banner and nav to behave on mobile/tablet ---- */
+@media (max-width: 1024px) {
+  .header {
+    background-size: contain !important;   /* show full image instead of zoomed crop   */
+    background-position: center top !important;
+    background-attachment: scroll !important;
+    padding-top: 60px;                     /* less empty space */
+    min-height: 150px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .navbar a {
+    margin: 6px 8px;
+  }
+
+  .main-poster-container {
+    margin: 16px;
+    padding-bottom: 30px;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
