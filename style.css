@@ -1,47 +1,92 @@
-/* Base reset */
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-  font-family:system-ui,sans-serif;
-  background:#0b0c17;
-  color:#e4e4ff;
-  line-height:1.6;
-  text-align:center;
+/* ========== BASE RESET ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header + Nav */
-header{
-  background:#15182b;
-  padding:1rem;
-}
-header h1{
-  margin-bottom:.5rem;
-  color:#80eaff;
-}
-nav a{
-  color:#c084fc;
-  text-decoration:none;
-  margin:0 .75rem;
-  font-weight:600;
-}
-nav a:hover{
-  text-decoration:underline;
+/* ========== BODY ========== */
+body {
+  font-family: system-ui, sans-serif;
+  background: #0b0c17;
+  color: #e4e4ff;
+  line-height: 1.6;
+  text-align: center;
 }
 
-/* Main */
-main{
-  padding:2rem 1rem;
+/* ========== HEADER & NAV ========== */
+header {
+  background: #15182b;
+  padding: 1rem;
 }
 
-/* Footer */
-footer{
-  background:#111;
-  color:#999;
-  font-size:.8rem;
-  padding:1rem;
+header h1 {
+  margin-bottom: 0.5rem;
+  color: #80eaff;
 }
 
-/* Mobile tweaks */
-@media(max-width:700px){
-  nav a{display:inline-block;margin:.5rem .25rem;font-size:.9rem}
+nav a {
+  color: #c084fc;
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* ========== LOGO SECTION ========== */
+#logo {
+  padding: 2rem 1rem;
+}
+
+#logo img {
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #c084fc;
+  box-shadow: 0 0 20px #c084fc;
+  border-radius: 8px;
+}
+
+/* ========== MAIN CONTENT ========== */
+main {
+  padding: 2rem 1rem;
+}
+
+main h2 {
+  color: #80eaff;
+  margin-bottom: 1rem;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #111;
+  color: #999;
+  font-size: 0.8rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ========== MOBILE TWEAKS ========== */
+@media (max-width: 700px) {
+  nav a {
+    display: inline-block;
+    margin: 0.5rem 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  #logo img {
+    width: 95%;
+    max-width: 400px;
+  }
+
+  main {
+    padding: 1.5rem 0.75rem;
+  }
 }
