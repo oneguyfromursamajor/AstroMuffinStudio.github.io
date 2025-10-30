@@ -161,3 +161,44 @@ html, body { overflow-x: hidden; }
   }
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between; /* pushes the two sides apart */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #00d9ff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links a {
+  color: #C084FC;
+  text-decoration: none;
+  margin: 0 15px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.nav-links a:hover {
+  text-shadow: 0 0 5px yellow, 0 0 10px yellow;
+}
+
+.lang-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.lang-buttons button {
+  background: rgba(0, 0, 0, 0.4);
+  color: #C084FC;
+  border: 1px solid #C084FC;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  padding: 5px 7px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.lang-buttons button:hover {
+  background-color: #C084FC;
+  color: black;
+}
