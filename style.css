@@ -91,3 +91,16 @@ footer {
     padding: 1.5rem 0.75rem;
   }
 }
+
+/* ======= Top Banner (Hero) ======= */
+.hero {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
