@@ -81,3 +81,34 @@ body {
     font-size: 12px;
     cursor: pointer;
 }
+
+/* --- Mobile adjustments --- */
+@media (max-width: 700px) {
+
+  .navbar {
+    flex-wrap: wrap;          /* allows the links to wrap instead of shrinking */
+    font-size: 12px;          /* keeps it readable without forcing zoom-out */
+    padding: 8px 4px;
+  }
+
+  .navbar a {
+    margin: 6px;              /* smaller gaps so it fits better */
+  }
+
+  .main-poster-container {
+    margin: 16px;             /* reduces that 48px margin on phones */
+  }
+
+  .main {
+    padding: 20px 10px;
+  }
+
+  .header {
+    padding-top: 60px;        /* trims the huge 120px banner space */
+  }
+
+  .lang-toggle {
+    right: 10px;
+    top: 10px;
+  }
+}
