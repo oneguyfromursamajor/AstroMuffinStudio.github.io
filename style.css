@@ -44,8 +44,8 @@ nav a:hover {
 }
 
 #logo img {
-  width: 80%;             /* scales smoothly on phones */
-  max-width: 450px;       /* smaller hard cap */
+  width: 80%;
+  max-width: 450px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -53,7 +53,6 @@ nav a:hover {
   box-shadow: 0 0 15px #c084fc;
   border-radius: 8px;
 }
-
 
 /* ========== MAIN CONTENT ========== */
 main {
@@ -107,7 +106,7 @@ footer {
   object-fit: cover;
 }
 
-/* --- Fix tiny horizontal shift on some tablets (portrait) --- */
+/* --- Fix tiny horizontal shift on some tablets --- */
 html, body { overflow-x: hidden; }
 
 .site-header, .header-banner {
@@ -118,55 +117,18 @@ html, body { overflow-x: hidden; }
 }
 
 .navbar, #logo {
-  max-width: 100vw;   /* prevents any child from pushing page wider than the viewport */
-  overflow-x: clip;   /* stops shadows/images from creating horizontal scroll */
+  max-width: 100vw;
+  overflow-x: clip;
 }
 
-/* --- Language Toggle --- */
-.lang-toggle {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  display: flex;
-  gap: 6px;
-  z-index: 999;
-}
-
-.lang-toggle button {
-  background: rgba(0, 0, 0, 0.5);
-  color: #C084FC;
-  border: 1px solid #C084FC;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 10px;
-  padding: 4px 6px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.lang-toggle button:hover {
-  background-color: #C084FC;
-  color: black;
-}
-
-@media (max-width: 600px) {
-  .lang-toggle {
-    top: 10px;
-    right: 10px;
-    gap: 4px;
-  }
-
-  .lang-toggle button {
-    font-size: 9px;
-    padding: 3px 5px;
-  }
-}
+/* ========== NAVBAR & LANGUAGE BUTTONS ========== */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;              /* allows buttons to drop neatly on phones */
+  justify-content: space-between;   /* links left, buttons right */
+  flex-wrap: wrap;                  /* wraps neatly on phones */
   padding: 10px 20px;
-  background-color: #15182b;    /* matches header */
+  background-color: #15182b;
   border-top: 1px solid #2b2d3d;
   border-bottom: 1px solid #2b2d3d;
 }
@@ -175,8 +137,8 @@ html, body { overflow-x: hidden; }
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
-  flex: 1;
+  justify-content: flex-start;
+  flex: 1 1 auto;
 }
 
 .nav-links a {
@@ -191,9 +153,12 @@ html, body { overflow-x: hidden; }
   text-shadow: 0 0 5px yellow, 0 0 10px yellow;
 }
 
+/* === Language Buttons === */
 .lang-buttons {
   display: flex;
   gap: 8px;
+  margin-left: auto;     /* pushes to far right */
+  flex-shrink: 0;        /* prevents wrapping */
 }
 
 .lang-buttons button {
@@ -212,7 +177,7 @@ html, body { overflow-x: hidden; }
   color: black;
 }
 
-/* ---- Mobile fix ---- */
+/* ---- Mobile Fix ---- */
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
@@ -225,6 +190,8 @@ html, body { overflow-x: hidden; }
   }
 
   .lang-buttons {
-    order: 2; /* ensures buttons drop below nav links cleanly */
+    order: 2;                 /* drop under links */
+    justify-content: center;  /* centered under links */
+    margin-left: 0;
   }
 }
