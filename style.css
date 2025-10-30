@@ -160,22 +160,31 @@ html, body { overflow-x: hidden; }
     padding: 3px 5px;
   }
 }
-
 .navbar {
   display: flex;
-  justify-content: space-between; /* pushes the two sides apart */
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;              /* allows buttons to drop neatly on phones */
   padding: 10px 20px;
-  background-color: #00d9ff;
-  font-weight: bold;
-  font-size: 18px;
+  background-color: #15182b;    /* matches header */
+  border-top: 1px solid #2b2d3d;
+  border-bottom: 1px solid #2b2d3d;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  flex: 1;
 }
 
 .nav-links a {
   color: #C084FC;
   text-decoration: none;
-  margin: 0 15px;
   font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -184,7 +193,7 @@ html, body { overflow-x: hidden; }
 
 .lang-buttons {
   display: flex;
-  gap: 6px;
+  gap: 8px;
 }
 
 .lang-buttons button {
@@ -201,4 +210,21 @@ html, body { overflow-x: hidden; }
 .lang-buttons button:hover {
   background-color: #C084FC;
   color: black;
+}
+
+/* ---- Mobile fix ---- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .lang-buttons {
+    order: 2; /* ensures buttons drop below nav links cleanly */
+  }
 }
