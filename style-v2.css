@@ -1,0 +1,175 @@
+/* ===============================
+   ASTRO MUFFIN STUDIO STYLES
+   =============================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e; /* Clean deep background, not black */
+    font-family: 'Orbitron', sans-serif;
+    color: #00ff00;
+}
+
+/* ----- HEADER / BANNER ----- */
+.header {
+    background-image: url('HomePage_Banner003.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 200px;          /* fixed height for consistency */
+    padding-top: 120px;
+    padding-bottom: 1px;
+    text-align: center;
+}
+
+/* ----- NAVBAR ----- */
+.navbar {
+    background-color: #00d9ff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;            /* allows links to wrap on small screens */
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar a {
+    color: #C084FC;
+    text-decoration: none;
+    margin: 0 20px;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.navbar a:hover {
+    text-shadow: 0 0 5px yellow, 0 0 10px yellow;
+}
+
+/* ----- MAIN CONTENT ----- */
+.main {
+    padding: 40px;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+}
+
+.main-poster-container {
+    margin: 48px;               /* breathing room */
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.main-poster {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border: 3px solid #C084FC;  /* poster frame */
+    box-shadow: 0 0 20px #C084FC;
+}
+
+/* ----- FOOTER ----- */
+.footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
+}
+
+/* ----- LANGUAGE TOGGLE ----- */
+.lang-toggle {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.lang-toggle button {
+    background-color: transparent;
+    border: 1px solid #C084FC;
+    color: #C084FC;
+    font-family: 'Press Start 2P', cursive;
+    padding: 4px 6px;
+    margin-left: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* ----- UNIVERSAL FIXES ----- */
+html, body {
+    width: 100%;
+    overflow-x: hidden;         /* prevent sideways scroll */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===============================
+   MOBILE ADJUSTMENTS
+   =============================== */
+@media (max-width: 700px) {
+
+  .header {
+    min-height: 120px;          /* smaller banner height */
+    padding-top: 40px;
+    background-size: cover;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    font-size: 12px;
+    padding: 8px 4px;
+  }
+
+  .navbar a {
+    margin: 6px;
+  }
+
+  .main-poster-container {
+    margin: 16px;
+    padding-bottom: 30px;
+  }
+
+  .main {
+    padding: 20px 10px;
+  }
+
+  .lang-toggle {
+    right: 10px;
+    top: 10px;
+  }
+}
+
+/* ---- Force banner and nav to behave on mobile/tablet ---- */
+@media (max-width: 1024px) {
+  .header {
+    background-size: contain !important;   /* show full image instead of zoomed crop   */
+    background-position: center top !important;
+    background-attachment: scroll !important;
+    padding-top: 60px;                     /* less empty space */
+    min-height: 150px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .navbar a {
+    margin: 6px 8px;
+  }
+
+  .main-poster-container {
+    margin: 16px;
+    padding-bottom: 30px;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+}
