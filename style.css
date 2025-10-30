@@ -1,0 +1,47 @@
+/* Base reset */
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:system-ui,sans-serif;
+  background:#0b0c17;
+  color:#e4e4ff;
+  line-height:1.6;
+  text-align:center;
+}
+
+/* Header + Nav */
+header{
+  background:#15182b;
+  padding:1rem;
+}
+header h1{
+  margin-bottom:.5rem;
+  color:#80eaff;
+}
+nav a{
+  color:#c084fc;
+  text-decoration:none;
+  margin:0 .75rem;
+  font-weight:600;
+}
+nav a:hover{
+  text-decoration:underline;
+}
+
+/* Main */
+main{
+  padding:2rem 1rem;
+}
+
+/* Footer */
+footer{
+  background:#111;
+  color:#999;
+  font-size:.8rem;
+  padding:1rem;
+}
+
+/* Mobile tweaks */
+@media(max-width:700px){
+  nav a{display:inline-block;margin:.5rem .25rem;font-size:.9rem}
+}
