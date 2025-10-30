@@ -1,3 +1,7 @@
+/* ===============================
+   ASTRO MUFFIN STUDIO STYLES
+   =============================== */
+
 body {
     margin: 0;
     padding: 0;
@@ -6,19 +10,25 @@ body {
     color: #00ff00;
 }
 
+/* ----- HEADER / BANNER ----- */
 .header {
     background-image: url('HomePage_Banner003.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 200px;          /* fixed height for consistency */
     padding-top: 120px;
     padding-bottom: 1px;
     text-align: center;
 }
 
+/* ----- NAVBAR ----- */
 .navbar {
     background-color: #00d9ff;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;            /* allows links to wrap on small screens */
     padding: 10px 0;
     font-weight: bold;
     font-size: 20px;
@@ -36,6 +46,7 @@ body {
     text-shadow: 0 0 5px yellow, 0 0 10px yellow;
 }
 
+/* ----- MAIN CONTENT ----- */
 .main {
     padding: 40px;
     text-align: center;
@@ -44,19 +55,20 @@ body {
 }
 
 .main-poster-container {
-    margin: 48px; /* Approx. 3 inches */
+    margin: 48px;               /* breathing room */
     text-align: center;
-    padding-bottom: 60px; /* Extra breathing room below */
+    padding-bottom: 60px;
 }
 
 .main-poster {
     width: 100%;
     max-width: 1200px;
     height: auto;
-    border: 3px solid #C084FC; /* Optional: poster frame */
+    border: 3px solid #C084FC;  /* poster frame */
     box-shadow: 0 0 20px #C084FC;
 }
 
+/* ----- FOOTER ----- */
 .footer {
     background-color: #111;
     color: #ccc;
@@ -65,6 +77,8 @@ body {
     font-size: 12px;
     font-family: 'Courier New', monospace;
 }
+
+/* ----- LANGUAGE TOGGLE ----- */
 .lang-toggle {
     position: absolute;
     top: 20px;
@@ -82,29 +96,46 @@ body {
     cursor: pointer;
 }
 
-/* --- Mobile adjustments --- */
+/* ----- UNIVERSAL FIXES ----- */
+html, body {
+    width: 100%;
+    overflow-x: hidden;         /* prevent sideways scroll */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===============================
+   MOBILE ADJUSTMENTS
+   =============================== */
 @media (max-width: 700px) {
 
+  .header {
+    min-height: 120px;          /* smaller banner height */
+    padding-top: 40px;
+    background-size: cover;
+  }
+
   .navbar {
-    flex-wrap: wrap;          /* allows the links to wrap instead of shrinking */
-    font-size: 12px;          /* keeps it readable without forcing zoom-out */
+    flex-wrap: wrap;
+    font-size: 12px;
     padding: 8px 4px;
   }
 
   .navbar a {
-    margin: 6px;              /* smaller gaps so it fits better */
+    margin: 6px;
   }
 
   .main-poster-container {
-    margin: 16px;             /* reduces that 48px margin on phones */
+    margin: 16px;
+    padding-bottom: 30px;
   }
 
   .main {
     padding: 20px 10px;
-  }
-
-  .header {
-    padding-top: 60px;        /* trims the huge 120px banner space */
   }
 
   .lang-toggle {
@@ -112,3 +143,4 @@ body {
     top: 10px;
   }
 }
+
