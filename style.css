@@ -44,15 +44,16 @@ nav a:hover {
 }
 
 #logo img {
-  max-width: 600px;
-  width: 90%;
+  width: 80%;             /* scales smoothly on phones */
+  max-width: 450px;       /* smaller hard cap */
   height: auto;
   display: block;
   margin: 0 auto;
-  border: 3px solid #c084fc;
-  box-shadow: 0 0 20px #c084fc;
+  border: 2px solid #c084fc;
+  box-shadow: 0 0 15px #c084fc;
   border-radius: 8px;
 }
+
 
 /* ========== MAIN CONTENT ========== */
 main {
