@@ -25,19 +25,6 @@ header h1 {
   color: #80eaff;
 }
 
-nav a {
-  color: #c084fc;
-  text-decoration: none;
-  margin: 0 0.75rem;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  color: #fff;
-}
-
 /* ========== LOGO SECTION ========== */
 #logo {
   padding: 2rem 1rem;
@@ -75,17 +62,10 @@ footer {
 
 /* ========== MOBILE TWEAKS ========== */
 @media (max-width: 700px) {
-  nav a {
-    display: inline-block;
-    margin: 0.5rem 0.25rem;
-    font-size: 0.9rem;
-  }
-
   #logo img {
     width: 95%;
     max-width: 400px;
   }
-
   main {
     padding: 1.5rem 0.75rem;
   }
@@ -121,12 +101,12 @@ html, body { overflow-x: hidden; }
   overflow-x: clip;
 }
 
-/* ========== NAVBAR & LANGUAGE BUTTONS ========== */
+/* ========== NAVBAR ========== */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;   /* links left, buttons right */
-  flex-wrap: wrap;                  /* wraps neatly on phones */
+  justify-content: space-between;  /* links left, language right */
+  flex-wrap: wrap;
   padding: 10px 20px;
   background-color: #15182b;
   border-top: 1px solid #2b2d3d;
@@ -153,45 +133,86 @@ html, body { overflow-x: hidden; }
   text-shadow: 0 0 5px yellow, 0 0 10px yellow;
 }
 
-/* === Language Buttons === */
-.lang-buttons {
-  display: flex;
-  gap: 8px;
-  margin-left: auto;     /* pushes to far right */
-  flex-shrink: 0;        /* prevents wrapping */
+/* ========== LANGUAGE DROPDOWN ========== */
+.lang-menu {
+  position: relative;
 }
 
-.lang-buttons button {
-  background: rgba(0, 0, 0, 0.4);
+.lang-btn {
+  background-color: #15182b;
   color: #C084FC;
   border: 1px solid #C084FC;
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
   padding: 5px 7px;
   cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(192, 132, 252, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.lang-btn:hover {
+  background-color: #C084FC;
+  color: #000;
+  box-shadow: 0 0 15px rgba(192, 132, 252, 0.8),
+              0 0 25px rgba(192, 132, 252, 0.6);
+  transform: translateY(-1px);
+}
+
+/* Dropdown box */
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #15182b;
+  border: 1px solid #C084FC;
+  min-width: 120px;
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(192, 132, 252, 0.4);
+  z-index: 10;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Dropdown links */
+.lang-dropdown a {
+  color: #C084FC;
+  padding: 6px 10px;
+  display: block;
+  text-decoration: none;
+  font-size: 10px;
+  font-family: 'Press Start 2P', cursive;
   transition: all 0.2s ease-in-out;
 }
 
-.lang-buttons button:hover {
+.lang-dropdown a:hover {
   background-color: #C084FC;
-  color: black;
+  color: #000;
+  text-shadow: 0 0 8px #fff, 0 0 12px #fff;
 }
 
-/* ---- Mobile Fix ---- */
+/* Show dropdown on hover */
+.lang-menu:hover .lang-dropdown {
+  display: block;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- MOBILE FIX ---- */
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
-
   .nav-links {
     justify-content: center;
   }
-
-  .lang-buttons {
-    order: 2;                 /* drop under links */
-    justify-content: center;  /* centered under links */
-    margin-left: 0;
+  .lang-menu {
+    margin-top: 8px;
   }
 }
