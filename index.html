@@ -36,27 +36,31 @@
   </div>
 </div>
 
-  <script>
+<script>
 document.querySelectorAll('.lang-dropdown a').forEach(item => {
-    item.addEventListener('click', function() {
-        const selected = this.innerText;
+    item.addEventListener('click', function (e) {
+        e.preventDefault();
+        const selected = this.innerText.trim();
+
         if (selected === "English") setLanguage('en');
         if (selected === "日本語") setLanguage('jp');
     });
 });
 </script>
 
+
   <section id="logo">
     <img src="AstroMuffin_MainLogo.png" alt="Astro Muffin Studio Logo">
   </section>
 
   <main>
-  <h1 style="color:#80eaff; font-size:2rem; margin-bottom:0.5rem;">
-    Welcome to <span style="color:#c084fc;">Astro Muffin Studio</span>
-  </h1>
-  <h2 style="color:#80eaff; font-size:1.2rem; font-weight:normal;">
-    Hand-baking games from the edge of the galaxy.
-  </h2>
+  <h1 data-en="Welcome to Astro Muffin Studio" 
+    data-jp="アストロ・マフィン・スタジオへようこそ"
+    class="glow-title"></h1>
+<h2 data-en="Hand-baking games from the edge of the galaxy."
+    data-jp="銀河の果てで、心を込めてゲームを焼き上げています。">
+</h2>
+
 </main>
 
 
