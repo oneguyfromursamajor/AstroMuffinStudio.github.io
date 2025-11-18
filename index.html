@@ -36,6 +36,16 @@
   </div>
 </div>
 
+  <script>
+document.querySelectorAll('.lang-dropdown a').forEach(item => {
+    item.addEventListener('click', function() {
+        const selected = this.innerText;
+        if (selected === "English") setLanguage('en');
+        if (selected === "日本語") setLanguage('jp');
+    });
+});
+</script>
+
   <section id="logo">
     <img src="AstroMuffin_MainLogo.png" alt="Astro Muffin Studio Logo">
   </section>
