@@ -8,13 +8,6 @@
 </head>
 <body>
 
-    <div class="header">
-        <div class="lang-toggle">
-            <button onclick="setLanguage('en')">EN</button>
-            <button onclick="setLanguage('jp')">JP</button>
-        </div>
-    </div>
-
     <div class="navbar">
   <div class="nav-links">
     <a href="index.html">Home</a>
@@ -34,6 +27,16 @@
     </div>
   </div>
 </div>
+
+    <script>
+document.querySelectorAll('.lang-dropdown a').forEach(item => {
+    item.addEventListener('click', function() {
+        const selected = this.innerText;
+        if (selected === "English") setLanguage('en');
+        if (selected === "日本語") setLanguage('jp');
+    });
+});
+</script>
 
 
     <div class="main">
