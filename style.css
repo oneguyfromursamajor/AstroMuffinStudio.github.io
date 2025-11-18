@@ -217,6 +217,7 @@ html, body { overflow-x: hidden; }
   }
 }
 
+/* ====== ABOUT PAGE GLOW HEADERS ====== */
 .about-highlight {
   font-size: 2rem;
   font-weight: 700;
@@ -224,4 +225,6 @@ html, body { overflow-x: hidden; }
   background: linear-gradient(90deg, #80eaff, #c084fc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
+
