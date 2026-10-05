@@ -62,16 +62,12 @@ body::before {
   inset: 0;
   z-index: -3;
   background:
-    radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.92) 0 1px, transparent 2px),
-    radial-gradient(circle at 28% 64%, rgba(99, 210, 255, 0.75) 0 1px, transparent 2px),
-    radial-gradient(circle at 74% 24%, rgba(255, 228, 168, 0.96) 0 1px, transparent 2px),
-    radial-gradient(circle at 91% 58%, rgba(255, 255, 255, 0.78) 0 1px, transparent 2px),
-    radial-gradient(ellipse at 74% 22%, rgba(114, 191, 255, 0.34), transparent 20rem),
-    radial-gradient(ellipse at 84% 36%, rgba(255, 162, 74, 0.24), transparent 21rem),
-    radial-gradient(ellipse at 62% 42%, rgba(160, 80, 255, 0.34), transparent 24rem),
-    radial-gradient(ellipse at 50% 100%, rgba(255, 194, 96, 0.28), transparent 22rem),
+    linear-gradient(90deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.02) 48%, rgba(1, 4, 11, 0.16)),
+    linear-gradient(180deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.04) 54%, rgba(1, 4, 11, 0.35)),
+    url("assets/images/cosmic-background.png"),
     linear-gradient(135deg, #01040b 0%, #051326 42%, #17061f 100%);
-  background-size: 220px 220px, 310px 310px, 270px 270px, 390px 390px, auto, auto, auto, auto, auto;
+  background-size: cover, cover, cover, cover;
+  background-position: center top;
 }
 
 .cosmic-bg::after {
@@ -374,6 +370,18 @@ p {
   max-height: 560px;
   object-fit: contain;
   filter: drop-shadow(0 0 38px rgba(255, 199, 107, 0.34));
+}
+
+.hero-logo-jp {
+  display: none;
+}
+
+html[lang="ja"] .hero-logo-en {
+  display: none;
+}
+
+html[lang="ja"] .hero-logo-jp {
+  display: block;
 }
 
 .branch-grid {
