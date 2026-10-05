@@ -32,20 +32,12 @@
 
 html {
   scroll-behavior: smooth;
-  background:
-    linear-gradient(90deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.02) 48%, rgba(1, 4, 11, 0.16)),
-    linear-gradient(180deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.04) 54%, rgba(1, 4, 11, 0.35)),
-    url("/assets/images/cosmic-background-wide.png?v=8"),
-    linear-gradient(135deg, #01040b 0%, #051326 42%, #17061f 100%);
-  background-attachment: fixed, fixed, fixed, fixed;
-  background-position: center center, center center, center 75%, center center;
-  background-size: cover, cover, cover, cover;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: transparent;
+  background: var(--bg);
   color: var(--text);
   font-family: "Cinzel", Georgia, serif;
   overflow-x: hidden;
@@ -56,32 +48,43 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -2;
   background:
-    radial-gradient(circle at 72% 20%, rgba(255, 205, 105, 0.22), transparent 10rem),
-    radial-gradient(circle at 82% 42%, rgba(255, 133, 76, 0.16), transparent 19rem),
-    radial-gradient(circle at 64% 30%, rgba(143, 79, 255, 0.3), transparent 21rem),
-    radial-gradient(circle at 28% 26%, rgba(0, 240, 255, 0.14), transparent 19rem),
-    linear-gradient(180deg, rgba(3, 7, 17, 0.06), rgba(3, 7, 17, 0.28) 76%);
+    radial-gradient(circle at 80% 12%, rgba(255, 205, 105, 0.2), transparent 13rem),
+    radial-gradient(circle at 72% 38%, rgba(157, 85, 255, 0.24), transparent 19rem),
+    radial-gradient(circle at 20% 30%, rgba(0, 240, 255, 0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(3, 7, 17, 0.16), #030711 76%);
 }
 
 .cosmic-bg {
-  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  background:
+    radial-gradient(circle at 17% 18%, rgba(55, 170, 255, 0.25) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 24%, rgba(255, 228, 168, 0.9) 0 1px, transparent 2px),
+    radial-gradient(circle at 42% 70%, rgba(255, 255, 255, 0.65) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 72% 16%, rgba(139, 76, 255, 0.3), transparent 20rem),
+    radial-gradient(ellipse at 78% 48%, rgba(255, 176, 76, 0.15), transparent 24rem),
+    radial-gradient(ellipse at 28% 86%, rgba(0, 215, 255, 0.14), transparent 28rem),
+    linear-gradient(135deg, #030711 0%, #08182e 46%, #120720 100%);
+  background-size: auto, auto, auto, auto, auto, auto, auto;
 }
 
 .cosmic-bg::after {
-  content: none;
+  content: "";
+  position: absolute;
+  inset: -10%;
+  background:
+    conic-gradient(from 21deg at 78% 20%, transparent 0 65%, rgba(255, 212, 122, 0.13), transparent 78%),
+    radial-gradient(ellipse at 78% 20%, transparent 0 4rem, rgba(164, 99, 255, 0.18) 4.3rem 4.6rem, transparent 5rem),
+    radial-gradient(ellipse at 70% 22%, rgba(255, 255, 255, 0.9) 0 1px, transparent 2px);
+  filter: blur(0.2px);
+  opacity: 0.88;
 }
 
 a {
   color: inherit;
-}
-
-.site-nav,
-main,
-.site-footer {
-  position: relative;
-  z-index: 1;
 }
 
 .site-nav {
@@ -117,19 +120,41 @@ main,
 
 .brand-mark {
   position: relative;
-  display: block;
-  flex: 0 0 auto;
-  width: 60px;
-  height: 48px;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 42px;
   color: var(--gold);
   filter: drop-shadow(0 0 12px rgba(255, 207, 104, 0.55));
 }
 
-.brand-mark img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  width: 54px;
+  height: 17px;
+  border: 2px solid currentColor;
+  border-top-color: rgba(255, 224, 148, 0.45);
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+
+.brand-mark::after {
+  content: "✦";
+  position: absolute;
+  top: 0;
+  right: 2px;
+  font-size: 0.8rem;
+}
+
+.brand-muffin {
+  position: relative;
+  width: 26px;
+  height: 24px;
+  background: linear-gradient(180deg, #ffe19b, #b46b23);
+  border: 2px solid #ffd682;
+  border-radius: 46% 46% 32% 32%;
+  clip-path: polygon(8% 40%, 22% 12%, 48% 4%, 77% 11%, 93% 40%, 83% 100%, 18% 100%);
 }
 
 .brand-text {
@@ -290,6 +315,11 @@ p {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
+.button::after {
+  content: "→";
+  margin-left: 0.7rem;
+}
+
 .button:hover {
   transform: translateY(-2px);
 }
@@ -342,18 +372,6 @@ p {
   filter: drop-shadow(0 0 38px rgba(255, 199, 107, 0.34));
 }
 
-.hero-logo-jp {
-  display: none;
-}
-
-html[lang="ja"] .hero-logo-en {
-  display: none;
-}
-
-html[lang="ja"] .hero-logo-jp {
-  display: block;
-}
-
 .branch-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -377,23 +395,12 @@ html[lang="ja"] .hero-logo-jp {
 .creative-list article::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -2px;
   z-index: 0;
   border-radius: inherit;
-  padding: 2px;
-  background:
-    linear-gradient(90deg, transparent 0 14%, var(--glow) 24%, #fff 30%, var(--glow) 36%, transparent 52%)
-      -52% 0 / 52% 2px no-repeat,
-    linear-gradient(180deg, transparent 0 14%, var(--glow) 24%, #fff 30%, var(--glow) 36%, transparent 52%)
-      100% -52% / 2px 52% no-repeat,
-    linear-gradient(270deg, transparent 0 14%, var(--glow) 24%, #fff 30%, var(--glow) 36%, transparent 52%)
-      152% 100% / 52% 2px no-repeat,
-    linear-gradient(0deg, transparent 0 14%, var(--glow) 24%, #fff 30%, var(--glow) 36%, transparent 52%)
-      0 152% / 2px 52% no-repeat;
+  background: conic-gradient(from var(--spin, 0deg), transparent, var(--glow), transparent 32%);
   opacity: 0;
   transition: opacity 220ms ease;
-  pointer-events: none;
-  filter: drop-shadow(0 0 10px var(--glow));
 }
 
 .branch-card::after,
@@ -411,34 +418,19 @@ html[lang="ja"] .hero-logo-jp {
 .product-card:hover::before,
 .creative-list article:hover::before {
   opacity: 1;
-  animation: perimeter-light 1.35s linear forwards;
+  animation: orbital-border 1s linear forwards;
 }
 
-@keyframes perimeter-light {
-  0% {
-    background-position: -52% 0, 100% -52%, 152% 100%, 0 152%;
+@keyframes orbital-border {
+  to {
+    --spin: 360deg;
   }
-  24% {
-    background-position: 100% 0, 100% -52%, 152% 100%, 0 152%;
-  }
-  25% {
-    background-position: 152% 0, 100% -52%, 152% 100%, 0 152%;
-  }
-  49% {
-    background-position: 152% 0, 100% 100%, 152% 100%, 0 152%;
-  }
-  50% {
-    background-position: 152% 0, 100% 152%, 152% 100%, 0 152%;
-  }
-  74% {
-    background-position: 152% 0, 100% 152%, 0 100%, 0 152%;
-  }
-  75% {
-    background-position: 152% 0, 100% 152%, -52% 100%, 0 152%;
-  }
-  100% {
-    background-position: 152% 0, 100% 152%, -52% 100%, 0 0;
-  }
+}
+
+@property --spin {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
 }
 
 .branch-card > *,
@@ -452,12 +444,6 @@ html[lang="ja"] .hero-logo-jp {
   min-height: 300px;
   padding: clamp(1.4rem, 3vw, 2rem);
   transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.branch-link {
-  display: block;
-  color: inherit;
-  text-decoration: none;
 }
 
 .branch-card:hover,
@@ -517,17 +503,6 @@ html[lang="ja"] .hero-logo-jp {
   content: "✦";
   margin-right: 0.6rem;
   color: var(--glow);
-}
-
-.card-cta {
-  display: inline-flex;
-  margin-top: 1.6rem;
-  color: var(--glow);
-  font-family: "League Spartan", Arial, sans-serif;
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .product-section,
@@ -706,66 +681,6 @@ html[lang="ja"] .hero-logo-jp {
   color: var(--muted);
 }
 
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.info-card,
-.notice-box {
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(6, 16, 33, 0.72);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
-}
-
-.info-card {
-  padding: 1.2rem;
-}
-
-.info-card h2 {
-  margin-top: 0;
-  font-size: 1.55rem;
-  line-height: 1;
-}
-
-.email-link {
-  display: inline-flex;
-  margin-top: 0.8rem;
-  color: var(--gold-strong);
-  font-family: "League Spartan", Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
-  text-decoration: none;
-  overflow-wrap: anywhere;
-}
-
-.email-link:hover {
-  color: var(--cyan);
-  text-shadow: 0 0 18px rgba(33, 246, 233, 0.42);
-}
-
-.notice-box {
-  margin-top: 1.25rem;
-  padding: 1.25rem;
-  border-color: rgba(247, 199, 107, 0.38);
-}
-
-.notice-box h2 {
-  margin-top: 0;
-}
-
-.notice-box p:last-child,
-.info-card p:last-child {
-  margin-bottom: 0;
-}
-
-.store-grid {
-  margin-top: 2rem;
-}
-
 @media (max-width: 980px) {
   .site-nav {
     align-items: flex-start;
@@ -795,8 +710,7 @@ html[lang="ja"] .hero-logo-jp {
 
   .branch-grid,
   .product-grid,
-  .creative-list,
-  .info-grid {
+  .creative-list {
     grid-template-columns: 1fr;
   }
 
@@ -810,16 +724,6 @@ html[lang="ja"] .hero-logo-jp {
 }
 
 @media (max-width: 620px) {
-  html {
-    background:
-      linear-gradient(90deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.02) 48%, rgba(1, 4, 11, 0.16)),
-      linear-gradient(180deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.04) 54%, rgba(1, 4, 11, 0.35)),
-      url("/assets/images/cosmic-background.png?v=8"),
-      linear-gradient(135deg, #01040b 0%, #051326 42%, #17061f 100%);
-    background-position: center center, center center, center top, center center;
-    background-size: cover, cover, cover, cover;
-  }
-
   .site-nav {
     width: min(100% - 1rem, 1180px);
   }
