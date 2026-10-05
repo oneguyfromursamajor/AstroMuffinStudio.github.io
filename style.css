@@ -35,7 +35,7 @@ html {
   background:
     linear-gradient(90deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.02) 48%, rgba(1, 4, 11, 0.16)),
     linear-gradient(180deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.04) 54%, rgba(1, 4, 11, 0.35)),
-    url("/assets/images/cosmic-background.png?v=6"),
+    url("/assets/images/cosmic-background-wide.png?v=7"),
     linear-gradient(135deg, #01040b 0%, #051326 42%, #17061f 100%);
   background-attachment: fixed, fixed, fixed, fixed;
   background-position: center top;
@@ -759,6 +759,16 @@ html[lang="ja"] .hero-logo-jp {
 }
 
 @media (max-width: 620px) {
+  html {
+    background:
+      linear-gradient(90deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.02) 48%, rgba(1, 4, 11, 0.16)),
+      linear-gradient(180deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.04) 54%, rgba(1, 4, 11, 0.35)),
+      url("/assets/images/cosmic-background.png?v=7"),
+      linear-gradient(135deg, #01040b 0%, #051326 42%, #17061f 100%);
+    background-position: center top;
+    background-size: cover, cover, cover, cover;
+  }
+
   .site-nav {
     width: min(100% - 1rem, 1180px);
   }
