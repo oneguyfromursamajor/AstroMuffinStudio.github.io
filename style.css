@@ -38,7 +38,7 @@ html {
     url("/assets/images/cosmic-background-wide.png?v=8"),
     linear-gradient(135deg, #01040b 0%, #051326 42%, #17061f 100%);
   background-attachment: fixed, fixed, fixed, fixed;
-  background-position: center center, center center, center 65%, center center;
+  background-position: center center, center center, center 75%, center center;
   background-size: cover, cover, cover, cover;
 }
 
