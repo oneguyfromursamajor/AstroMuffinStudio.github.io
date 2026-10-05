@@ -32,19 +32,20 @@
 
 html {
   scroll-behavior: smooth;
+  background:
+    linear-gradient(90deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.02) 48%, rgba(1, 4, 11, 0.16)),
+    linear-gradient(180deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.04) 54%, rgba(1, 4, 11, 0.35)),
+    url("/assets/images/cosmic-background.png?v=6"),
+    linear-gradient(135deg, #01040b 0%, #051326 42%, #17061f 100%);
+  background-attachment: fixed, fixed, fixed, fixed;
+  background-position: center top;
+  background-size: cover, cover, cover, cover;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    linear-gradient(90deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.02) 48%, rgba(1, 4, 11, 0.16)),
-    linear-gradient(180deg, rgba(1, 4, 11, 0.08), rgba(1, 4, 11, 0.04) 54%, rgba(1, 4, 11, 0.35)),
-    url("assets/images/cosmic-background.png"),
-    linear-gradient(135deg, #01040b 0%, #051326 42%, #17061f 100%);
-  background-attachment: fixed, fixed, fixed, fixed;
-  background-position: center top;
-  background-size: cover, cover, cover, cover;
+  background: transparent;
   color: var(--text);
   font-family: "Cinzel", Georgia, serif;
   overflow-x: hidden;
@@ -65,26 +66,11 @@ body::before {
 }
 
 .cosmic-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -3;
-  background:
-    linear-gradient(135deg, #01040b 0%, #051326 42%, #17061f 100%);
-  background-size: cover;
-  background-position: center top;
+  display: none;
 }
 
 .cosmic-bg::after {
-  content: "";
-  position: absolute;
-  inset: -10%;
-  background:
-    conic-gradient(from 26deg at 78% 22%, transparent 0 61%, rgba(255, 218, 137, 0.24), transparent 75%),
-    radial-gradient(ellipse at 78% 22%, transparent 0 4.2rem, rgba(164, 99, 255, 0.24) 4.45rem 4.8rem, transparent 5.2rem),
-    radial-gradient(ellipse at 55% 102%, rgba(255, 210, 128, 0.3), transparent 24rem),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.42), transparent 34%);
-  filter: blur(0.2px);
-  opacity: 0.95;
+  content: none;
 }
 
 a {
