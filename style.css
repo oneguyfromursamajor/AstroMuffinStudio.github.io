@@ -55,13 +55,13 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: -2;
+  z-index: 0;
   background:
     radial-gradient(circle at 72% 20%, rgba(255, 205, 105, 0.22), transparent 10rem),
     radial-gradient(circle at 82% 42%, rgba(255, 133, 76, 0.16), transparent 19rem),
     radial-gradient(circle at 64% 30%, rgba(143, 79, 255, 0.3), transparent 21rem),
     radial-gradient(circle at 28% 26%, rgba(0, 240, 255, 0.14), transparent 19rem),
-    linear-gradient(180deg, rgba(3, 7, 17, 0.08), #030711 76%);
+    linear-gradient(180deg, rgba(3, 7, 17, 0.06), rgba(3, 7, 17, 0.28) 76%);
 }
 
 .cosmic-bg {
@@ -89,6 +89,13 @@ body::before {
 
 a {
   color: inherit;
+}
+
+.site-nav,
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 .site-nav {
