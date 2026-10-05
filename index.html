@@ -7,7 +7,7 @@
   <title>Astro Muffin Studios</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=League+Spartan:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,10 +26,11 @@
 
     <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html" data-en="Home" data-jp="ホーム">Home</a>
-      <a href="#digital-labs" data-en="Digital Labs" data-jp="デジタルラボ">Digital Labs</a>
-      <a href="#creative-works" data-en="Creative Works" data-jp="クリエイティブ作品">Creative Works</a>
+      <a href="digital.html" data-en="Digital Labs" data-jp="デジタルラボ">Digital Labs</a>
+      <a href="creative.html" data-en="Creative Works" data-jp="クリエイティブ作品">Creative Works</a>
       <a href="about.html" data-en="About" data-jp="アバウト">About</a>
-      <a href="#contact" data-en="Contact" data-jp="連絡先">Contact</a>
+      <a href="store.html" data-en="Store" data-jp="ストア">Store</a>
+      <a href="contact.html" data-en="Contact" data-jp="連絡先">Contact</a>
     </nav>
 
     <div class="language-switch" aria-label="Language selector">
@@ -48,8 +49,8 @@
         <p class="hero-line" data-en="Security, safety, dreams, and imagination." data-jp="安心、安全、夢、そして想像力。">Security, safety, dreams, and imagination.</p>
         <p data-en="Software for recovery, privacy, and organization. Stories and worlds built for wonder." data-jp="復元、プライバシー、整理のためのソフトウェア。驚きと想像力のための物語と世界。">Software for recovery, privacy, and organization. Stories and worlds built for wonder.</p>
         <div class="button-row">
-          <a class="button button-primary" href="#digital-labs" data-en="Explore Digital Labs" data-jp="デジタルラボを見る">Explore Digital Labs</a>
-          <a class="button button-secondary" href="#creative-works" data-en="Explore Creative Works" data-jp="クリエイティブ作品を見る">Explore Creative Works</a>
+          <a class="button button-primary" href="digital.html" data-en="Explore Digital Labs" data-jp="デジタルラボを見る">Explore Digital Labs</a>
+          <a class="button button-secondary" href="creative.html" data-en="Explore Creative Works" data-jp="クリエイティブ作品を見る">Explore Creative Works</a>
         </div>
       </div>
 
@@ -60,20 +61,21 @@
     </section>
 
     <section class="branch-grid section-shell" aria-label="Astro Muffin branches">
-      <article class="branch-card digital-card" id="digital-labs">
+      <a class="branch-card branch-link digital-card" id="digital-labs" href="digital.html" aria-label="Open Astro Muffin Digital Labs">
         <div class="branch-icon" aria-hidden="true">⌬</div>
-        <h2 data-en="Digital Labs" data-jp="デジタルラボ">Digital Labs</h2>
+        <h2 data-en="Astro Muffin Digital" data-jp="アストロ・マフィン・デジタル">Astro Muffin Digital</h2>
         <p data-en="Practical software for a safer, cleaner, more organized digital life." data-jp="より安全で、すっきりと整理されたデジタル生活のための実用的なソフトウェア。">Practical software for a safer, cleaner, more organized digital life.</p>
         <ul>
           <li data-en="More control" data-jp="より多くのコントロール">More control</li>
           <li data-en="Greater privacy" data-jp="より高いプライバシー">Greater privacy</li>
           <li data-en="A more organized life" data-jp="より整理された生活">A more organized life</li>
         </ul>
-      </article>
+        <span class="card-cta" data-en="Explore Digital Labs" data-jp="デジタルラボを見る">Explore Digital Labs</span>
+      </a>
 
-      <article class="branch-card creative-card" id="creative-works">
+      <a class="branch-card branch-link creative-card" id="creative-works" href="creative.html" aria-label="Open Astro Muffin Creative Works">
         <div class="branch-icon" aria-hidden="true">✦</div>
-        <h2 data-en="Creative Works" data-jp="クリエイティブ作品">Creative Works</h2>
+        <h2 data-en="Astro Muffin Creative" data-jp="アストロ・マフィン・クリエイティブ">Astro Muffin Creative</h2>
         <p data-en="Stories, worlds, animation, games, and imagination built for wonder." data-jp="驚きのために作られる物語、世界、アニメーション、ゲーム、そして想像力。">Stories, worlds, animation, games, and imagination built for wonder.</p>
         <ul>
           <li data-en="Original stories" data-jp="オリジナルストーリー">Original stories</li>
@@ -81,12 +83,13 @@
           <li data-en="Animation and games" data-jp="アニメーションとゲーム">Animation and games</li>
           <li data-en="Imagination without limits" data-jp="限界のない想像力">Imagination without limits</li>
         </ul>
-      </article>
+        <span class="card-cta" data-en="Explore Creative Works" data-jp="クリエイティブ作品を見る">Explore Creative Works</span>
+      </a>
     </section>
 
     <section class="section-shell product-section">
       <div class="section-heading">
-        <p class="eyebrow" data-en="Digital Labs" data-jp="デジタルラボ">Digital Labs</p>
+        <p class="eyebrow" data-en="Astro Muffin Digital" data-jp="アストロ・マフィン・デジタル">Astro Muffin Digital</p>
         <h2 data-en="Software for a safer, freer tomorrow." data-jp="より安全で、より自由な明日のためのソフトウェア。">Software for a safer, freer tomorrow.</h2>
         <p data-en="Focused tools to recover, organize, protect, and give you more control over your digital life." data-jp="復元、整理、保護を助け、デジタル生活をより自分で管理するためのツール。">Focused tools to recover, organize, protect, and give you more control over your digital life.</p>
       </div>
@@ -114,8 +117,8 @@
           <div class="product-icon phantom" aria-hidden="true"></div>
           <div>
             <p class="status" data-en="In Development" data-jp="開発中">In Development</p>
-            <h3 data-en="Phantom Folder" data-jp="ファントム・フォルダー">Phantom Folder</h3>
-            <p data-en="A private folder concept with a normal-looking alternate view." data-jp="通常の表示とプライベートな表示を持つフォルダー構想。">A private folder concept with a normal-looking alternate view.</p>
+          <h3 data-en="Phantom / Decoy Vault" data-jp="ファントム / デコイ・ヴォルト">Phantom / Decoy Vault</h3>
+          <p data-en="Private storage with a real space and a normal-looking decoy view." data-jp="本物のプライベート空間と通常に見えるデコイ表示を持つストレージ。">Private storage with a real space and a normal-looking decoy view.</p>
           </div>
         </article>
 
@@ -149,13 +152,13 @@
     </section>
 
     <section class="section-shell creative-preview">
-      <p class="eyebrow" data-en="Creative Works" data-jp="クリエイティブ作品">Creative Works</p>
+        <p class="eyebrow" data-en="Astro Muffin Creative" data-jp="アストロ・マフィン・クリエイティブ">Astro Muffin Creative</p>
       <h2 data-en="Stories and worlds built for wonder." data-jp="驚きのために作られる物語と世界。">Stories and worlds built for wonder.</h2>
       <div class="creative-list">
         <article>
           <p class="status" data-en="In Development" data-jp="開発中">In Development</p>
-          <h3 data-en="Illustrated Art Stories" data-jp="イラスト物語">Illustrated Art Stories</h3>
-          <p data-en="Star Station Saga I, II, III, Aura's Tale, and original story worlds in development." data-jp="Star Station Saga I、II、III、Aura's Tale、そして開発中のオリジナル物語世界。">Star Station Saga I, II, III, Aura's Tale, and original story worlds in development.</p>
+          <h3 data-en="Bright Star Station" data-jp="ブライト・スター・ステーション">Bright Star Station</h3>
+          <p data-en="Book I of A Star Station Saga, with characters, animation, and original worlds in development." data-jp="A Star Station Saga の Book I。キャラクター、アニメーション、オリジナル世界を開発中。">Book I of A Star Station Saga, with characters, animation, and original worlds in development.</p>
         </article>
         <article>
           <p class="status" data-en="In Development" data-jp="開発中">In Development</p>
@@ -186,9 +189,11 @@
     </div>
 
     <div class="footer-links">
-      <a href="#digital-labs" data-en="Digital Labs" data-jp="デジタルラボ">Digital Labs</a>
-      <a href="#creative-works" data-en="Creative Works" data-jp="クリエイティブ作品">Creative Works</a>
+      <a href="digital.html" data-en="Digital Labs" data-jp="デジタルラボ">Digital Labs</a>
+      <a href="creative.html" data-en="Creative Works" data-jp="クリエイティブ作品">Creative Works</a>
       <a href="about.html" data-en="About" data-jp="アバウト">About</a>
+      <a href="store.html" data-en="Store" data-jp="ストア">Store</a>
+      <a href="contact.html" data-en="Contact" data-jp="連絡先">Contact</a>
       <a href="copyright.html" data-en="Copyright" data-jp="著作権">Copyright</a>
     </div>
 
