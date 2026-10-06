@@ -119,39 +119,23 @@ main,
   position: relative;
   display: grid;
   place-items: center;
-  width: 52px;
-  height: 42px;
-  color: var(--gold);
+  width: 58px;
+  height: 48px;
   filter: drop-shadow(0 0 12px rgba(255, 207, 104, 0.55));
 }
 
 .brand-mark::before {
-  content: "";
-  position: absolute;
-  width: 54px;
-  height: 17px;
-  border: 2px solid currentColor;
-  border-top-color: rgba(255, 224, 148, 0.45);
-  border-radius: 50%;
-  transform: rotate(-18deg);
+  content: none;
 }
 
 .brand-mark::after {
-  content: "✦";
-  position: absolute;
-  top: 0;
-  right: 2px;
-  font-size: 0.8rem;
+  content: none;
 }
 
 .brand-muffin {
-  position: relative;
-  width: 26px;
-  height: 24px;
-  background: linear-gradient(180deg, #ffe19b, #b46b23);
-  border: 2px solid #ffd682;
-  border-radius: 46% 46% 32% 32%;
-  clip-path: polygon(8% 40%, 22% 12%, 48% 4%, 77% 11%, 93% 40%, 83% 100%, 18% 100%);
+  width: 58px;
+  height: 48px;
+  background: url("assets/images/golden-muffin-brand-mark.png") center / contain no-repeat;
 }
 
 .brand-text {
