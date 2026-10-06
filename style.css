@@ -766,6 +766,10 @@ html[lang="ja"] .hero-logo-jp {
   margin-top: 0;
 }
 
+.page-panel > .button {
+  margin-top: 1.5rem;
+}
+
 @media (max-width: 980px) {
   .site-nav {
     align-items: flex-start;
