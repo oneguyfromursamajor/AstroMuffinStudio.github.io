@@ -390,7 +390,8 @@ html[lang="ja"] .hero-logo-jp {
 
 .branch-card,
 .product-card,
-.creative-list article {
+.creative-list article,
+.creative-list a {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -401,7 +402,8 @@ html[lang="ja"] .hero-logo-jp {
 
 .branch-card::before,
 .product-card::before,
-.creative-list article::before {
+.creative-list article::before,
+.creative-list a::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -425,7 +427,8 @@ html[lang="ja"] .hero-logo-jp {
 
 .branch-card::after,
 .product-card::after,
-.creative-list article::after {
+.creative-list article::after,
+.creative-list a::after {
   content: "";
   position: absolute;
   inset: 1px;
@@ -436,7 +439,8 @@ html[lang="ja"] .hero-logo-jp {
 
 .branch-card:hover::before,
 .product-card:hover::before,
-.creative-list article:hover::before {
+.creative-list article:hover::before,
+.creative-list a:hover::before {
   opacity: 1;
   animation: perimeter-light 1.35s linear forwards;
 }
@@ -470,7 +474,8 @@ html[lang="ja"] .hero-logo-jp {
 
 .branch-card > *,
 .product-card > *,
-.creative-list article > * {
+.creative-list article > *,
+.creative-list a > * {
   position: relative;
   z-index: 2;
 }
@@ -481,7 +486,9 @@ html[lang="ja"] .hero-logo-jp {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.branch-link {
+.branch-link,
+.product-link,
+.creative-link {
   display: block;
   color: inherit;
   text-decoration: none;
@@ -489,7 +496,8 @@ html[lang="ja"] .hero-logo-jp {
 
 .branch-card:hover,
 .product-card:hover,
-.creative-list article:hover {
+.creative-list article:hover,
+.creative-list a:hover {
   transform: translateY(-4px);
   box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5), 0 0 32px color-mix(in srgb, var(--glow), transparent 62%);
 }
@@ -654,7 +662,8 @@ html[lang="ja"] .hero-logo-jp {
   margin-top: 1.4rem;
 }
 
-.creative-list article {
+.creative-list article,
+.creative-list a {
   --glow: var(--gold);
   min-height: 190px;
   padding: 1.25rem;
@@ -857,7 +866,8 @@ html[lang="ja"] .hero-logo-jp {
 
   .branch-card,
   .product-card,
-  .creative-list article {
+  .creative-list article,
+  .creative-list a {
     border-radius: 14px;
   }
 
